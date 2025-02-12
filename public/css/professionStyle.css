@@ -1,0 +1,45 @@
+.profession-wrapper {
+    position: relative;
+}
+
+.profession-wrapper::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    background-color: gray;
+}
+.inner-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .profession-wrapper::before {
+        display: none;
+    }
+
+    .inner-bar {
+    left: 0;
+    }
+
+}
+
+.experience-box {
+    position: relative;
+}
+
+/* .experience-box::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #383737;
+    left: -25px;
+    top: 7px;
+} */

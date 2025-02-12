@@ -1,0 +1,11 @@
+.navbar-wrapper {
+    position: fixed;
+    margin-bottom: 120px;
+    width: 100%;
+    max-width: 1700px;
+    height: auto;
+    left: auto;
+    right: auto;
+    top: 0;
+    z-index: 999;
+}

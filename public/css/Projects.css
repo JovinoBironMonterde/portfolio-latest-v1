@@ -1,0 +1,143 @@
+
+.image-box {
+    height: 102% !important;
+}
+
+.items-box {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.slide-wrapper {
+    padding-bottom: 30px;
+}
+
+.slick-arrow, .slick-prev, .slick-next {
+    display: none !important;
+}
+
+/* Icon */
+.project-stock-icon svg{
+   font-size: 20px;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.719);
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.image-wrapper:hover::before {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+/* Dots Slide Button */
+.image-wrapper .slick-dots {
+    position: absolute;
+    top: 30px !important;
+    left: 30px !important;
+    display: flex;
+    justify-content: left;
+}
+
+.image-wrapper .slick-dots li button::before{
+    color: aliceblue !important;
+    content: '' !important;
+    z-index: 9999;
+    font-size: 8px;
+
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 20px;
+    /* display: none; */
+}
+
+/* .image-wrapper .slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(22 146 161);
+    background-color: transparent;
+    border-radius: 20px;
+    z-index: 9999999 !important;
+}
+*/
+
+.image-wrapper .slick-dots .slick-active button::before {
+    background-color: rgb(255, 255, 255) !important;
+} 
+
+.details-wrapper {
+    height: 400px;
+}
+
+/* Kylin Project */
+/* .Content-1 .stack-1 {  background-color: aqua;}
+.Content-1 .stack-2 {  background-color: rgb(211, 80, 19);}
+.Content-1 .stack-3 {  background-color: rgb(204, 19, 211);} */
+
+.color-HTML { color: #E34F26; }
+.color-CSS { color: #1572B6; } 
+.color-JAVASCRIPT { color: #F7DF1E; } 
+.color-JQUERY { color: #0769AD; }
+.color-TYPESCRIPT { color: #3178C6; } 
+.color-REACT { color: #61DAFB; } 
+.color-VUE { color: #42B883; }
+.color-ANGULAR { color: #DD0031; } 
+.color-TAILWIND { color: #06B6D4; } 
+.color-BOOTSTRAP { color: #7952B3; } 
+.color-NODE { color: #339933; }
+.color-EXPRESS { color: #404D59; } 
+.color-DJANGO { color: #092E20; }
+.color-FLASK { color: #000000; } 
+.color-LARAVEL { color: #FF2D20; }
+.color-PHP { color: #777BB4; }  
+.color-MYSQL { color: #4479A1; } 
+.color-POSTGRESQL { color: #336791; } 
+.color-MONGODB { color: #47A248; } 
+.color-FIREBASE { color: #FFCA28; } 
+.color-MATERIALUI { color: #0081CB; }  
+.color-HUBSPOT { color: #FF7A59; }
+
+.HTML { background-color: #E34F26; }
+.CSS { background-color: #1572B6; } 
+.JAVASCRIPT { background-color: #F7DF1E; } 
+.JQUERY { background-color: #0769AD; }
+.TYPESCRIPT { background-color: #3178C6; } 
+.REACT { background-color: #61DAFB; } 
+.VUE { background-color: #42B883; }
+.ANGULAR { background-color: #DD0031; } 
+.TAILWIND { background-color: #06B6D4; } 
+.BOOTSTRAP { background-color: #7952B3; } 
+.NODE { background-color: #339933; }
+.EXPRESS { background-color: #404D59; } 
+.DJANGO { background-color: #092E20; }
+.FLASK { background-color: #000000; } 
+.LARAVEL { background-color: #FF2D20; }
+.PHP { background-color: #777BB4; }  
+.MYSQL { background-color: #4479A1; } 
+.POSTGRESQL { background-color: #336791; } 
+.MONGODB { background-color: #47A248; } 
+.FIREBASE { background-color: #FFCA28; } 
+.MATERIALUI { background-color: #0081CB; }  
+.HUBSPOT { background-color: #FF7A59; }
+
+
+
+
+
+  
+
+
