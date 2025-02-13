@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
             <section id="profession" className="w-full h-auto p-4 py-[110px] bg-[#1692a1]">
               <Profession />
             </section>
-            <section id="projects" className="w-full h-auto  py-[60px] bg-slate-200">
+            <section id="projects" className="w-full h-auto  py-[150px] bg-slate-200">
               <ProjectsPage />
             </section>
             <section id="Contact" className="w-full h-auto  py-[60px] bg-slate-50">
