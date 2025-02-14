@@ -104,7 +104,7 @@ return (
   </Slider>
 
   <div className="flex items-center justify-center w-full h-44">
-    <Button  variant="contained" sx={{marginTop: '80px', borderRadius: '100px', padding: '10px 24px', backgroundColor: 'rgb(22 146 161)'}}>View More!</Button>
+    <Button href="https://projects-list-chi.vercel.app/" target="_blank" variant="contained" sx={{marginTop: '80px', borderRadius: '100px', padding: '10px 24px', backgroundColor: 'rgb(22 146 161)'}}>View More!</Button>
   </div>
 </div>
 
