@@ -4,6 +4,8 @@ import { IconButton, Drawer, Box, List, ListItem, ListItemButton, ListItemText, 
 import MenuIcon from '@mui/icons-material/Menu';
 import '../../public/css/NavbarStyle.css';
 import '../../public/css/globals.css';
+import Image from 'next/image';
+import Imagelogo from '../../public/assets/img/JMonterde-removebg-preview2-removebg-preview.png'
 
 const navItems = [
   { name: 'Hero', path: '#hero' },
@@ -23,9 +25,9 @@ function Navbar() {
 
   const drawer = (
     <Box sx={{ textAlign: 'center', paddingTop: 2 }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Logo
-      </Typography>
+       <Box sx={{ my: 2, display: 'flex', justifyContent: 'center' }}>
+        <Image src={Imagelogo} width={150} height={100} alt="Logo" />
+      </Box>
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
@@ -44,9 +46,9 @@ function Navbar() {
     <header className='top-0 w-full'>
       <AppBar component="nav" position="static" sx={{ backgroundColor: '#333', px: 4, py:3 }}>
         <Toolbar className="flex justify-between">
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Logo
-          </Typography>
+          <Box sx={{ my: 2, display: 'flex', justifyContent: 'center' }}>
+            <Image src={Imagelogo} width={200} height={100} alt="Logo" />
+          </Box>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             <ul className="flex gap-4">
               {navItems.map((item) => (

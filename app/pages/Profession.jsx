@@ -10,7 +10,7 @@ function Profession() {
      
      <div className='w-full'>
       {SkillsData.map((skills, index) => (
-      <div key={skills.id} className={`Content-${index + 1} w-full h-auto px-8 mb-10`}>
+      <div key={skills.id} className={`Content-${index + 1} w-full h-auto mb-10`}>
         <div className="w-full lg:text-right md:text-right sm:text-left text-white text-xs mb-2">{skills.language}</div>
         <div className='w-full h-3 rounded-lg relative bg-slate-100'>
           <div className={`inner-bar h-3 rounded-lg bg-sky-400`} style={{ width: skills.percentage }}>
