@@ -51,7 +51,7 @@ return (
 <div className="w-full h-full">
   <Slider {...settings}>
     {projectsData.map((project, index) => (
-      <div key={project.id} className={`Content-${index + 1} w-full px-8 h-full`}>
+      <div key={project.id} className={`Content-${index + 1} w-full px-8 h-full `}>
         <div className="border lg:flex h-full rounded-2xl overflow-hidden">
           {/* Image Slider */}
           <div className="image-wrapper group relative w-full lg:w-1/2 ">
@@ -73,7 +73,7 @@ return (
             </div>
           </div>
           {/* Details */}
-          <div className="relative w-full h-[436px] flex flex-wrap content-between lg:w-1/2 bg-white">
+          <div className="relative w-full h-[437px] flex flex-wrap content-between lg:w-1/2 bg-white">
             <Typography variant="h5" gutterBottom sx={{ width: '100%', fontWeight: "bold", textAlign: 'center', color: "Black", padding: '30px' }}>
               {project.titlePage}
             </Typography>

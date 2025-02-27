@@ -3,12 +3,18 @@ import Image from 'next/image'
 import Typography from '@mui/material/Typography';
 import AboutImage from '../../public/assets/img/NewProfile.png'; 
 import WaveHaikei from '../components/WaveSVG';
+import svg2 from '../components/svg2';
 
 function Aboutpage() {
   return (
-    <div className='relative w-full h-auto lg:flex md:flex items-center p-10 pb-20'>
-      <div className="image-profile-image w-full flex justify-center p-20 z-50">
-        <Image src={AboutImage} alt="Your Image Alt Text" width={440} height={440} />
+    <div className='relative w-full h-auto lg:flex md:flex items-center '>
+      <div className="relative image-profile-image w-full flex justify-center p-20 z-50">
+        {/* <div className="absolute w-60 h-52 left-0 top-0">
+          <svg2 />
+        </div>
+        <span className="absolute w-[600px] h-[600px] rounded-tr-full rounded-br-full -left-16 -top-56 bg-slate-400"></span>
+        <span className="absolute w-[350px] h-[600px] rounded-tr-full rounded-br-full -left-16 top-0 bg-slate-400"></span> */}
+        <Image className='z-10' src={AboutImage} alt="Your Image Alt Text" width={440} height={440} />
       </div>
       <div className="profile-image w-full mb-28 lg:pr-20 z-50">
         <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold', color: 'black' }}>
@@ -24,9 +30,9 @@ function Aboutpage() {
         </div>
        
       </div>
-      <div className="absolute w-full left-0 bottom-0 z-10">
+      {/* <div className="absolute w-full left-0 bottom-0 z-10">
       <WaveHaikei/>
-      </div>
+      </div> */}
     </div>
   )
 }

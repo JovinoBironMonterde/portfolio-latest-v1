@@ -17,14 +17,14 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Contactpage() {
   return (
-    <div className='w-full h-auto p-4'>
+    <div className='w-full h-auto'>
       <div className="lg:flex items-center">
-        <div className="w-full max-w-[600px] mx-auto p-10">
+        <div className="w-full max-w-[600px] mx-auto lg:p-10 md:p-10 p-2">
           <div className="mb-20 ">
           <h1 className="font-bold text-[#1692a1]">Get in Touch</h1>
           </div>
           <div className="flex mb-4">
-            <ContactPhoneIcon sx={{ mr: 2}} />
+            <ContactPhoneIcon  sx={{ mr: { xs: 1, sm: 2 } }} />
             <span>09704566075</span>
           </div>
           <div className="flex mb-10">

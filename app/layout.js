@@ -31,10 +31,10 @@ export default function RootLayout({ children }) {
         <div className="main-wrapper">
           <div className="navbar-wrapper sticky top-0 left-0 w-full h-full"><Navbar /></div>
           <main className="w-full h-full">
-            <section id="hero" className="hero-wrapper w-full h-auto  pt-[110px] relative bg-slate-50">
+            <section id="hero" className="hero-wrapper w-full h-auto pt-[150px] relative bg-slate-50">
               <Heropage />
             </section>
-            <section id="aboutpage" className="w-full h-auto pt-[80px] bg-slate-50">
+            <section id="aboutpage" className="w-full h-auto py-[80px] overflow-hidden bg-slate-50">
               <Aboutpage />
             </section>
             <section id="profession" className="w-full h-auto p-4 py-[110px] bg-[#1692a1]">

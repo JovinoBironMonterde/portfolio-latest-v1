@@ -44,7 +44,7 @@ function Navbar() {
 
   return (
     <header className='top-0 w-full'>
-      <AppBar component="nav" position="static" sx={{ backgroundColor: '#333', px: 4, py:3 }}>
+      <AppBar component="nav" position="static" sx={{ backgroundColor: '#333', py:3 }}>
         <Toolbar className="flex justify-between">
           <Box sx={{ my: 2, display: 'flex', justifyContent: 'center' }}>
             <Image src={Imagelogo} width={200} height={100} alt="Logo" />
