@@ -52,4 +52,15 @@ export const projectsData = [
       { icon: <DesignServices />, title: "CSS", percentage: "16.6%" },
     ],
   },
+  {
+    id: 4,
+    titlePage: "Burger Bistro",
+    images: [AboutImage2, AboutImage1, AboutImage3],
+    description: "This is my first sample page using Webflow, built to explore its design tools, responsiveness, and interactions. It features a clean layout, custom animations, and a structured approach to web design without coding.",
+    linkViewPage: "https://sample-page-25e41f.webflow.io",
+    linkViewCode: "#",
+    icons: [
+      { icon: <DesignServices />, title: "WEBFLOW", percentage: "16.6%" },
+    ],
+  },
 ];

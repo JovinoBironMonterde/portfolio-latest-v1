@@ -13,7 +13,7 @@ const navItems = [
   { name: 'Profession', path: '#profession' },
   { name: 'Projects', path: '#projects' },
   { name: 'Resume', path: './resume/' },
-  { name: 'Contact', path: '#contact' },
+  { name: 'Contact', path: '#Contact' },
 ];
 
 function Navbar() {
@@ -44,10 +44,10 @@ function Navbar() {
 
   return (
     <header className='top-0 w-full'>
-      <AppBar component="nav" position="static" sx={{ backgroundColor: '#333', py:3 }}>
+      <AppBar component="nav" position="static" sx={{ backgroundColor: '#333', py:1 }}>
         <Toolbar className="flex justify-between">
           <Box sx={{ my: 2, display: 'flex', justifyContent: 'center' }}>
-            <Image src={Imagelogo} width={200} height={100} alt="Logo" />
+            <Image src={Imagelogo} width={130} height={80} alt="Logo" />
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             <ul className="flex gap-4">
