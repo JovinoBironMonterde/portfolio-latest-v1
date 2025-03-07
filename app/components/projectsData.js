@@ -1,20 +1,21 @@
 
-import kylin1 from "../../public/assets/img/kylin/kylin1.png";
-import kylin2 from "../../public/assets/img/kylin/kylin2.png";
-import kylin3 from "../../public/assets/img/kylin/kylin3.png";
+const kylin1 = "/assets/img/kylin/kylin1.png";
+const kylin2 = "/assets/img/kylin/kylin2.png";
+const kylin3 = "/assets/img/kylin/kylin3.png";
 
-import mimnu1 from "../../public/assets/img/mimnu/mimnu1.png";
-import mimnu2 from "../../public/assets/img/mimnu/mimnu2.png";
-import mimnu3 from "../../public/assets/img/mimnu/mimnu3.png";
+const mimnu1 = "/assets/img/mimnu/mimnu1.png";
+const mimnu2 = "/assets/img/mimnu/mimnu2.png";
+const mimnu3 = "/assets/img/mimnu/mimnu3.png";
 
-import burderbistro1 from "../../public/assets/img/burger_bistro/burgerbistro1.png";
-import burderbistro2 from "../../public/assets/img/burger_bistro/burgerbistro2.png";
-import burderbistro3 from "../../public/assets/img/burger_bistro/burgerbistro3.png";
-import burderbistro4 from "../../public/assets/img/burger_bistro/burgerbistro4.png";
+const burgerbistro1 = "/assets/img/burger_bistro/burgerbistro1.png";
+const burgerbistro2 = "/assets/img/burger_bistro/burgerbistro2.png";
+const burgerbistro3 = "/assets/img/burger_bistro/burgerbistro3.png";
+const burgerbistro4 = "/assets/img/burger_bistro/burgerbistro4.png";
 
-import apchu1 from "../../public/assets/img/apchu/apchu1.png";
-import apchu2 from "../../public/assets/img/apchu/apchu2.png";
-import apchu3 from "../../public/assets/img/apchu/apchu3.png";
+const apchu1 = "/assets/img/apchu/apchu1.png";
+const apchu2 = "/assets/img/apchu/apchu2.png";
+const apchu3 = "/assets/img/apchu/apchu3.png";
+
 
 
 
@@ -67,7 +68,7 @@ export const projectsData = [
   {
     id: 4,
     titlePage: "Burger Bistro",
-    images: [burderbistro1, burderbistro2, burderbistro3, burderbistro4],
+    images: [burgerbistro1, burgerbistro2, burgerbistro3, burgerbistro4],
     description: "This is my first sample page using Webflow, built to explore its design tools, responsiveness, and interactions. It features a clean layout, custom animations, and a structured approach to web design without coding.",
     linkViewPage: "https://sample-page-25e41f.webflow.io",
     linkViewCode: "#",
