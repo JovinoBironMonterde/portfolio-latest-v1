@@ -1,6 +1,3 @@
-import AboutImage1 from "../../public/assets/img/avails.png";
-import AboutImage2 from "../../public/assets/img/image1.jpeg";
-import AboutImage3 from "../../public/assets/img/image2.jpeg";
 
 import kylin1 from "../../public/assets/img/kylin/kylin1.png";
 import kylin2 from "../../public/assets/img/kylin/kylin2.png";
