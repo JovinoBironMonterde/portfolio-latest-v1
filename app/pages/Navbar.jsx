@@ -12,7 +12,7 @@ const navItems = [
   { name: 'About', path: '#aboutpage' },
   { name: 'Profession', path: '#profession' },
   { name: 'Projects', path: '#projects' },
-  { name: 'Resume', path: './resume/' },
+  // { name: 'Resume', path: './resume/' },
   { name: 'Contact', path: '#Contact' },
 ];
 

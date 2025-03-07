@@ -8,6 +8,7 @@ import Profession from "./pages/Profession";
 import ProjectsPage from "./pages/Projects";
 import Contactpage from "./pages/Contactpage";
 import Footer from "./pages/Footer";
+import RevealAnimation from "./components/RevealAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <RevealAnimation/>
         <div className="main-wrapper">
           <div className="navbar-wrapper sticky top-0 left-0 w-full h-full"><Navbar /></div>
           <main className="w-full h-full">

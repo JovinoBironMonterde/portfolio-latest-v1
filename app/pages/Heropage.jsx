@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import '../../public/css/HeroStyle.css';
 import TextField from "@mui/material/TextField";
@@ -7,6 +8,12 @@ import Typography from '@mui/material/Typography';
 import FormComponent from '../components/formcomponent';
 
 function Heropage() {
+  const openResume = () => {
+    window.open("https://drive.google.com/file/d/1HuCFRexErT1kxD5t3JY1SrtCa-xCIeN1/view?usp=sharing", "_blank");
+  };
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="w-full h-full lg:flex items-center lg:px-10 md:px-10 px-2 lg:py-20 md:py-20 py-2">
       {/* Hero Details */}
@@ -49,8 +56,8 @@ function Heropage() {
 
         {/* Buttons */}
         <div className="flex  lg:justify-start justify-center gap-4">
-          <button className="cstmBtn cursor-pointer"><span>Project</span></button>
-          <button className="cstmBtn cursor-pointer"><span>Resume</span></button>
+          <button className="cstmBtn cursor-pointer" onClick={scrollToProjects}><span>Project</span></button>
+          <button className="cstmBtn cursor-pointer" onClick={openResume}><span>Resume</span></button>
         </div>
       </div>
 

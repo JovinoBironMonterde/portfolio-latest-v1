@@ -8,7 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 function formcomponent() {
   return (
-    <div className="w-full max-w-[600px] rounded-xl shadow-2xl mx-auto p-10 z-50 bg-slate-50">
+    <div className="w-full max-w-[600px] rounded-xl shadow-2xl mx-auto lg:p-10 md:p-10 p-6 z-50 bg-slate-50">
         <form action="https://getform.io/f/bpjjwnlb" method="POST" className="flex flex-col gap-4">
           <TextField id="name" name="name" label="Fullname" variant="outlined" required
             InputProps={{

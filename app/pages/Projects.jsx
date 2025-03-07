@@ -24,10 +24,11 @@ export default function Projects() {
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
+  speed: 5000,
+  autoplaySpeed: 4000,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   // centerMode: true,
   // centerPadding: "10%",
   responsive: [
@@ -62,10 +63,10 @@ return (
 <div className="w-full h-full">
   <Slider {...settings}>
     {projectsData.map((project, index) => (
-      <div key={project.id} className={`Content-${index + 1} w-full lg:px-8 md:px-4 px-2 h-full `}>
-        <div className="border lg:flex h-full rounded-2xl overflow-hidden">
+      <div key={project.id} className={`Content-${index + 1} w-full lg:px-20 md:px-10 px-2 h-full `}>
+        <div className="border lg:flex h-full rounded-2xl overflow-hidden shadow-xl my-10">
           {/* Image Slider */}
-          <div className="image-wrapper group relative w-full lg:w-1/2 ">
+          <div className="image-wrapper group relative w-full lg:w-1/2">
             <Slider {...settings2}>
               {project.images.map((imgSrc, imgIndex) => (
                 <div key={imgIndex} className="relative w-full lg:h-[430px] md:h-[300px] h-[280px]">
@@ -80,16 +81,16 @@ return (
             </Slider>
             <div className="absolute left-0 bottom-4 transition-opacity duration-300 opacity-0 z-50 group-hover:opacity-100 w-full flex lg:gap-8 md:gap-4 gap-2 justify-center p-4">
               <Button sx={{ width: '150px', color: 'white', borderColor: 'white' }} variant="outlined" href={project.linkViewPage} target="_blank" rel="noopener noreferrer">View Project</Button>
-              <Button sx={{ width: '150px' }} variant="contained" color="primary" href={project.linkViewPage} target="_blank" rel="noopener noreferrer">View Code</Button>
+              <Button sx={{ width: '150px' }} variant="contained" color="primary" href={project.linkViewCode} target="_blank" rel="noopener noreferrer">View Code</Button>
             </div>
           </div>
           {/* Details */}
-          <div className="relative w-full lg:h-[437px] md:h-[300px] sm:h-[100px] lg:w-1/2 bg-white border-l-2 lg:flex flex-wrap content-between">
-            <Typography variant="h5" gutterBottom sx={{ width: '100%', fontWeight: "bold", textAlign: 'center', color: "Black", padding: { xs: '10px', lg: '30px' } }}>
+          <div className="relative w-full lg:h-[437px] md:h-[300px] min-h-[280px] lg:w-1/2 bg-slate-100 flex flex-wrap content-between">
+            <Typography variant="h5" gutterBottom sx={{ width: '100%', fontWeight: "bold", textAlign: 'center', color: "Black", marginBottom: '0', padding: { xs: '30px', lg: '30px' } }}>
               {project.titlePage}
             </Typography>
 
-            <Button sx={{ width: '200px', margin: '0 auto', color: 'gray', border: 'none', alignSelf: 'center', display: { xs: 'flex', lg: 'none' } }} variant="outlined" onClick={() => handleOpen(index + 1)}>
+            <Button sx={{ width: '200px', margin: '0 auto', marginBottom: '10px', color: 'gray', border: 'none', alignSelf: 'center', display: { xs: 'flex', lg: 'none' } }} variant="outlined" onClick={() => handleOpen(index + 1)}>
               View Description
             </Button>
             <Typography gutterBottom sx={{ textAlign: 'center', color: "Black", width: '100%', padding: '10px 50px', display: { xs: 'none', lg: 'block' } }}>
@@ -99,14 +100,14 @@ return (
     
             {/* Details */}
             <div className="relative w-full  lg:w-full lg:px-10 lg:pb-8 md:px-10 md:p-8 ">
-              <div className="w-full pt-3 px-3">
+              <div className="w-full pt-3 px-3 mb-4">
                 {project.icons.map((item, index) => (
                   <div key={index} className={`stack-${index + 1} relative before h-auto flex items-center mb-4`}>
                     <div className="w-full text-left flex items-center">
                       <span className={`color-${item.title} ${item.title} absolute w-[10px]  h-[10px] top-1 left-0  rounded-full `}></span>
                       <span className="text-xs pl-5 ">{item.title}</span>
                     </div>
-                    <div className={`stack-${index + 1} h-3 w-full relative rounded-full overflow-hidden bg-slate-100`}>
+                    <div className={`stack-${index + 1} h-3 w-full relative rounded-full overflow-hidden bg-slate-200`}>
                       <div className={`${item.title} absolute left-0 top-0 h-3 rounded-full overflow-hidden`} style={{ width: item.percentage }}></div>
                     </div>
                   </div>

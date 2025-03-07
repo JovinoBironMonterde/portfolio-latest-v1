@@ -10,7 +10,7 @@ function Profession() {
      
      <div className='w-full'>
       {SkillsData.map((skills, index) => (
-      <div key={skills.id} className={`Content-${index + 1} w-full h-auto mb-10`}>
+      <div key={skills.id} className={`Content-${index + 1} w-full h-auto mb-10 reveal fade-left`}>
         <div className="w-full lg:text-right md:text-right sm:text-left text-white text-xs mb-2">{skills.language}</div>
         <div className='w-full h-3 rounded-lg relative bg-slate-100'>
           <div className={`inner-bar h-3 rounded-lg bg-sky-400`} style={{ width: skills.percentage }}>
@@ -25,7 +25,7 @@ function Profession() {
 
      <div className='w-full text-center lg:text-left md:text-left'>
       {ExperienceData.map((ExperienceData, index) => (
-      <div key={ExperienceData.id} className={`${index + 1} experience-box mb-14`}>
+      <div key={ExperienceData.id} className={`${index + 1} experience-box mb-14 reveal fade-bottom`}>
           <Typography sx={{ fontWeight: 'bold', color: 'black', mb: 2,  lineHeight: 'normal', mb:2 }}>
             <span className="py-2 px-4 mb-5 bg-sky-100 rounded-full text-sky-800 text-xs">
               {ExperienceData.date}
