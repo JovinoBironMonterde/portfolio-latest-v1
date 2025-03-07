@@ -15,9 +15,9 @@ import burderbistro2 from "../../public/assets/img/burger_bistro/burgerbistro2.p
 import burderbistro3 from "../../public/assets/img/burger_bistro/burgerbistro3.png";
 import burderbistro4 from "../../public/assets/img/burger_bistro/burgerbistro4.png";
 
-import apchu1 from "../../public/assets/img/apchu/apchu1.png";
-import apchu2 from "../../public/assets/img/apchu/apchu2.png";
-import apchu3 from "../../public/assets/img/apchu/apchu3.png";
+import apch1 from "../../public/assets/img/apchu/apchu1.png";
+import apch2 from "../../public/assets/img/apchu/apchu2.png";
+import apch3 from "../../public/assets/img/apchu/apchu3.png";
 
 
 import { Code, Web, DesignServices, Javascript } from "@mui/icons-material"; // Import MUI icons
@@ -53,7 +53,7 @@ export const projectsData = [
   {
     id: 3,
     titlePage: "A.P Chu",
-    images: [apchu1, apchu2, apchu3],
+    images: [apch1, apch2, apch3],
     description: "Take design mockups and translate them into clean, responsive, and pixel-perfect web interfaces",
     linkViewPage: "https://www.apccdc.com/",
     linkViewCode: "#",
