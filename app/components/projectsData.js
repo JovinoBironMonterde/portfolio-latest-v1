@@ -12,9 +12,9 @@ import burderbistro2 from "../../public/assets/img/burger_bistro/burgerbistro2.p
 import burderbistro3 from "../../public/assets/img/burger_bistro/burgerbistro3.png";
 import burderbistro4 from "../../public/assets/img/burger_bistro/burgerbistro4.png";
 
-import apchu1 from "../../public/assets/img/apchu/apchu1.png"
-import apchu2 from "../../public/assets/img/apchu/apchu2.png"
-import apchu3 from "../../public/assets/img/apchu/apchu3.png"
+import apchu1 from "../../public/assets/img/apchu/apchu1.png";
+import apchu2 from "../../public/assets/img/apchu/apchu2.png";
+import apchu3 from "../../public/assets/img/apchu/apchu3.png";
 
 
 
