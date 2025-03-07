@@ -32,8 +32,8 @@ export const projectsData = [
     linkViewCode: "https://github.com/JovinoBironMonterde/LoanSystem_project",
     icons: [
       { icon: <Code />, title: "JAVASCRIPT", percentage: "52.3%" },
-      { icon: <Javascript />, title: "HTML", percentage: "31.3%" },
-      { icon: <DesignServices />, title: "CSS", percentage: "16.6%" },
+      { icon: <Javascript />, title: "HTML", percentage: "95.3%" },
+      { icon: <DesignServices />, title: "CSS", percentage: "80.6%" },
     ],
   },
   {

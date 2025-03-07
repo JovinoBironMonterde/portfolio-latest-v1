@@ -105,7 +105,7 @@ return (
                   <div key={index} className={`stack-${index + 1} relative before h-auto flex items-center mb-4`}>
                     <div className="w-full text-left flex items-center">
                       <span className={`color-${item.title} ${item.title} absolute w-[10px]  h-[10px] top-1 left-0  rounded-full `}></span>
-                      <span className="text-xs pl-5 ">{item.title}</span>
+                      <span className="text-xs pl-5 text-gray-800">{item.title}</span>
                     </div>
                     <div className={`stack-${index + 1} h-3 w-full relative rounded-full overflow-hidden bg-slate-200`}>
                       <div className={`${item.title} absolute left-0 top-0 h-3 rounded-full overflow-hidden`} style={{ width: item.percentage }}></div>
@@ -121,7 +121,7 @@ return (
   </Slider>
 
   <div className="flex items-center justify-center w-full h-44">
-    <Button href="https://projects-list-chi.vercel.app/" target="_blank" variant="contained" sx={{marginTop: '80px', borderRadius: '100px', padding: '10px 24px', backgroundColor: 'rgb(22 146 161)'}}>View More!</Button>
+    <Button href="https://projects-list-chi.vercel.app/" target="_blank" variant="contained" sx={{marginTop: '50px', borderRadius: '100px', padding: '10px 24px', backgroundColor: 'rgb(22 146 161)'}}>View More!</Button>
   </div>
   <Modal sx={{margin: '20px'}} open={openIndex !== null} onClose={handleClose}>
     <Box sx={{  position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: '100%', maxWidth: 500, bgcolor: "white", boxShadow: 24, p: 4, borderRadius: 2 }}>

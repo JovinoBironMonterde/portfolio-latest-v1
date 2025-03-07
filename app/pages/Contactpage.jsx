@@ -25,29 +25,29 @@ function Contactpage() {
               <h1 className="font-bold text-[#1692a1]">Get in Touch</h1>
             </div>
             <div className="flex mb-4">
-              <ContactPhoneIcon  sx={{ mr: { xs: 1, sm: 2 } }} />
-              <span className='text-slate-500'>09704566075</span>
+              <ContactPhoneIcon  sx={{ mr: { xs: 1, sm: 2, color: '#52525b' } }} />
+              <span className='text-zinc-600'>09704566075</span>
             </div>
             <div className="flex mb-10">
-              <MailIcon sx={{ mr: 2}} />
-              <span className='text-slate-500'>jovinobironmonterdejr2024@gmail.com</span>
+              <MailIcon sx={{ mr: 2, color: '#52525b' }} />
+              <span className='text-zinc-600'>jovinobironmonterdejr2024@gmail.com</span>
             </div>
             <div className="flex gap-4 justify-between lg:justify-start">
-              <button className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
+              <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300' >
                 <WhatsAppIcon  />
-              </button>
-              <button className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
+              </a>
+              <a href="https://www.facebook.com/messages/e2ee/t/7199980096767454" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <FacebookIcon  />
-              </button>
-              <button className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
+              </a>
+              {/* <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <TwitterIcon />
-              </button>
-              <button className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
+              </a>
+              <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <InstagramIcon  />
-              </button>
-              <button className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
+              </a> */}
+              <a href="https://www.linkedin.com/in/jovinobironmonterde/" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <LinkedInIcon  />
-              </button>
+              </a>
             </div>
           </div>
         </div>
