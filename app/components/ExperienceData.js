@@ -30,6 +30,13 @@ export const ExperienceData = [
     position: "Front-End Web Developer",
     description: "My role at Mimnu, an e-commerce site, I am responsible for designing each webpage with a strong emphasis on creating interactive and engaging user experiences. Additionally, I ensure that these designs are seamlessly integrated into a mobile-responsive format, guaranteeing optimal functionality across various devices and enhancing the overall usability of the website.",
   },
+  {
+    id: 5,
+    date: "March 2024 - August 2024",
+    company: "Lolita Heights Hotel",
+    position: "Front-End Web Developer",
+    description: "Built a Property Management System using React.js and Material-UI (MUI). Developed features like Check-in/Check-out, online booking, employee scheduling, payroll, and biometric attendance tracking. Designed responsive UIs, integrated RESTful APIs, and collaborated with backend teams to optimize performance. Delivered a scalable, user-friendly solution that enhanced operational efficiency.",
+  },
   
   
 ];
