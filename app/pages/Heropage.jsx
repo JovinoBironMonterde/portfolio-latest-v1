@@ -9,7 +9,7 @@ import FormComponent from '../components/formcomponent';
 
 function Heropage() {
   const openResume = () => {
-    window.open("https://drive.google.com/file/d/1HuCFRexErT1kxD5t3JY1SrtCa-xCIeN1/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1lyvUJQL1GOubKdqY4D-n96vwwBzrE2E9/view?usp=sharing", "_blank");
   };
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
