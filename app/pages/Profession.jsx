@@ -9,7 +9,7 @@ function Profession() {
     <div className='profession-wrapper w-full lg:w-[80%] h-auto mx-auto lg:flex md:flex items-center gap-10 py-5 lg:py-20'>
      
      <div className='w-full'>
-      {SkillsData.map((skills, index) => (
+      {/* {SkillsData.map((skills, index) => (
       <div key={skills.id} className={`Content-${index + 1} w-full h-auto mb-10 reveal fade-left`}>
         <div className="w-full lg:text-right md:text-right sm:text-left text-white text-xs mb-2">{skills.language}</div>
         <div className='w-full h-3 rounded-lg relative bg-slate-100'>
@@ -18,7 +18,7 @@ function Profession() {
           </div>
         </div>
       </div>
-      ))}
+      ))} */}
 
       <div className="">
       {SkillsData.map((skills, index) => (
