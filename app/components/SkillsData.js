@@ -42,14 +42,19 @@ export const SkillsData = [
     language: "MATERIAL UI",
     percentage: "80%",
   },
-  {
+    {
     id: 9,
+    language: "PYTHON / FLASK / JINJA",
+    percentage: "80%",
+  },
+  {
+    id: 10,
     language: "HUBSPOT",
     percentage: "75%",
   },
   {
-    id: 10,
-    language: "GIT/GITHUB",
+    id: 11,
+    language: "GIT / GITHUB",
     percentage: "80%",
   },
   
