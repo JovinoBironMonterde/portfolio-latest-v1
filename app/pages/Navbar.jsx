@@ -14,6 +14,7 @@ const navItems = [
   { name: 'Projects', path: '#projects' },
   // { name: 'Resume', path: './resume/' },
   { name: 'Contact', path: '#Contact' },
+  { name: 'Portfolio', path: '#Porfoliogallery' },
 ];
 
 function Navbar() {

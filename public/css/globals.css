@@ -51,7 +51,7 @@ body::before{
 .main-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1700px;
+  /* max-width: 1700px; */
   height: auto;
   margin: 0 auto;
   background-color: #ededed;
@@ -121,5 +121,48 @@ body::before{
   }
 }
 /* START REVEAL ANIMATION */
+
+
+.InfoWrapper {
+  width: 80px;
+  height: 80px;
+  border-bottom-right-radius: 100%;
+  transition: width .3s ease-in-out, height .3s ease-in-out;
+  background-color: #171717c9;
+  z-index: 99;
+}
+
+@media (max-width: 768px) { 
+  .InfoWrapper {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.InfoWrapper:hover {
+  width: 80vw;
+  height: 110vh;
+  transition: width .3s ease-in-out, height .3s ease-in-out;
+}
+
+.HeaderBox {
+  opacity: 0;
+  visibility: hidden;
+}
+.InfoWrapper:hover > .HeaderBox {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  animation: expandBox 1s ease-out forwards;
+}
+
+@keyframes expandBox {
+  0% {
+    margin-top: 140px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
 
 

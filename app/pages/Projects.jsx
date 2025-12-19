@@ -7,10 +7,15 @@ import "../../public/css/Projects.css";
 import { useState } from "react";
 import { Typography, Button, Modal, Box } from "@mui/material";
 import { projectsData } from "../components/projectsData"; // Import data
+import { Home, Users, Settings, Menu, X, Info, profile } from "lucide-react";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 export default function Projects() {
+  const navItems = [ 
+  // { href: "/", label: "Profile", icon: <Home size={18} /> },
+  { href: "/profile", label: "Profile", icon: <Users size={18} /> },
+];
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleOpen = (index) => {

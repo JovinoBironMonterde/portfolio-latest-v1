@@ -10,6 +10,7 @@ import Contactpage from "./pages/Contactpage";
 import Footer from "./pages/Footer";
 import RevealAnimation from "./components/RevealAnimation";
 import WaveHaikei from "./components/WaveSVG";
+import Porfoliogallery from "./pages/Porfoliogallery";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,8 +47,12 @@ export default function RootLayout({ children }) {
             <section id="profession" className="w-full h-auto p-4 lg:py-[200px] md:py-[150px] py-[100px] bg-[#1692a1]">
               <Profession />
             </section>
-            <section id="projects" className="projects-wrapper w-full h-auto pb-10 lg:pt-[200px] md:pt-[150px] pt-[100px] bg-slate-200">
-              <ProjectsPage />
+            {/* <section  id="Porfoliogallery" className="projects-wrapper w-full h-auto pb-10 lg:pt-[200px] md:pt-[150px] pt-[100px] bg-slate-200">
+              <Porfoliogallery />
+            </section> */}
+            <section id="projects" className="projects-wrapper w-full h-auto ">
+              {/* <ProjectsPage /> */}
+               <Porfoliogallery />
             </section>
             <section id="Contact" className="w-full h-auto lg:py-[200px] md:py-[150px] py-[100px] px-4 bg-slate-50">
               <Contactpage />
