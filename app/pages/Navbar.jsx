@@ -12,9 +12,7 @@ const navItems = [
   { name: 'About', path: '#aboutpage' },
   { name: 'Profession', path: '#profession' },
   { name: 'Projects', path: '#projects' },
-  // { name: 'Resume', path: './resume/' },
   { name: 'Contact', path: '#Contact' },
-  { name: 'Portfolio', path: '#Porfoliogallery' },
 ];
 
 function Navbar() {
@@ -32,11 +30,12 @@ function Navbar() {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton>
-              <a href={item.path}>
-                <ListItemText primary={item.name} />
-              </a>
-            </ListItemButton>
+          <ListItemButton>
+            <a href={item.path}>
+              <ListItemText primary={item.name} />
+            </a>
+          </ListItemButton>
+
           </ListItem>
         ))}
       </List>
