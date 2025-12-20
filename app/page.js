@@ -9,6 +9,7 @@ import Footer from "./pages/Footer";
 import RevealAnimation from "./components/RevealAnimation";
 import Porfoliogallery from "./pages/Porfoliogallery";
 
+
 export default function Home() {
   return (
     <>
@@ -23,15 +24,15 @@ export default function Home() {
             <Heropage />
           </section>
 
-          <section id="aboutpage" className="bg-slate-50">
+          <section id="aboutpage" className="bg-slate-50 px-4">
             <Aboutpage />
           </section>
 
-          <section id="profession" className="bg-[#1692a1]">
+          <section id="profession" className="bg-sky-950  px-4">
             <Profession />
           </section>
 
-          <section id="projects">
+          <section id="projects" className="">
             <Porfoliogallery />
           </section>
 

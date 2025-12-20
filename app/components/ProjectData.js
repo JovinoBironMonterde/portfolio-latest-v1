@@ -65,7 +65,7 @@ export const projectsData = [
     details: 'Additional details',  
     src: [lolitahotel1],
     alt: 'Forest path',
-    children: [lolitahotel1, lolitahotel2, lolitahotel3, lolitahotel4, lolitahotel5, lolitahotel6, lolitahotel7, lolitahotel8, lolitahotel9, lolitahotel10 ],
+    children: [lolitahotel1, lolitahotel2, lolitahotel3, lolitahotel5, lolitahotel8, lolitahotel10 ],
     tech: [
       { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
       { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
@@ -77,17 +77,12 @@ export const projectsData = [
     title: 'Your Project Title3',       
     description: 'Project description', 
     details: 'Additional details',  
-    src: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800', 
+    src: apchu1, 
     alt: 'Wildflowers',
-    children: [
-      'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400',
-      'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400',
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400',
-      'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400'
-    ],
+    children:  [apchu1, apchu2, apchu3],
     tech: [
       { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
-      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
+      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" }, 
       { ImgLogo: GitHub, title: "CSS", percentage: "80.6%" },
     ],
   },

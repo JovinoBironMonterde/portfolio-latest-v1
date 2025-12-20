@@ -63,19 +63,22 @@ export default function Porfoliogallery() {
     const currentChildren = currentProject.children;
 
     return (
-      <div className="h-auto py-[94px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="h-auto py-[94px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900  px-4">
         <div className="mx-auto">
-
+          <div className="w-full max-w-[1600px] text-center xl:hidden mx-auto text-white mb-3">
+            <h1 className="text-base sm:text-lg md:text-[40px] font-semibold my-4">{currentProject.title}</h1>
+          </div>
+          
           {/* Header */}
-          <div className="w-full text-center text-white mb-3">
+          <div className="w-full max-w-[1600px] flex items-center justify-between mx-auto text-white mb-3">
             <button
               onClick={handleClosePreview}
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition z-20"
+              className="  text-white rounded hover:text-blue-600 transition z-20"
             >
               Back to Gallery
             </button>
-
-            <h1 className="mt-3">{currentProject.title}</h1>
+            <h1 className="text-base sm:text-lg md:text-[40px] font-semibold hidden xl:block my-4">{currentProject.title}</h1>
+            <a href={currentProject.linkViewPage} target="_blanck">View Page</a>
           </div>
 
           {/* Main Carousel */}
@@ -84,9 +87,9 @@ export default function Porfoliogallery() {
 
               {/* Info Box */}
               <div className="InfoWrapper absolute left-0 top-0">
-                <InfoIcon className="absolute left-2 md:left-5 top-2 md:top-5 text-white" />
+                <InfoIcon className="absolute left-1 md:left-5 top-1 md:top-5  text-base md:text-xl text-white" />
 
-                <div className="HeaderBox Header-3rem py-30 px-50">
+                <div className="HeaderBox Header-3rem py-10 xl:py-30 px-30 xl:px-50">
                   <div className="w-full h-auto p-20 space-y-4">
 
                     <button
@@ -203,11 +206,11 @@ export default function Porfoliogallery() {
   /* -------------------------------------------------------------------------- */
 
   return (
-    <div className="h-auto p-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="h-auto p-3 xl:p-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {navItems.map((item) => (
         <li key={item.name} className="cursor-pointer text-white">
           <a href={item.path}>
-            <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
 
               {projectsData.map((project, idx) => (
                 <div
@@ -223,9 +226,10 @@ export default function Porfoliogallery() {
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-white text-lg font-semibold text-center px-4">
+                    <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold text-center px-4">
                       {project.title}
                     </h3>
+
                   </div>
 
                   {/* Image Count */}

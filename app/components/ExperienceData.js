@@ -1,5 +1,4 @@
 
-import { Code, Web, DesignServices, Javascript } from "@mui/icons-material"; // Import MUI icons
 
 export const ExperienceData = [
   {
@@ -37,6 +36,15 @@ export const ExperienceData = [
     position: "Front-End Web Developer",
     description: "Built a Property Management System using React.js and Material-UI (MUI). Developed features like Check-in/Check-out, online booking, employee scheduling, payroll, and biometric attendance tracking. Designed responsive UIs, integrated RESTful APIs, and collaborated with backend teams to optimize performance. Delivered a scalable, user-friendly solution that enhanced operational efficiency.",
   },
-  
-  
+  {
+    id: 6,
+    date: "February 2025 - Current",
+    company: "Pspace - Project Base",
+    position: "Front-End Web Developer",
+    description: "Built the PSpace application from scratch as a Frontend Developer. Implemented UI and dynamic data rendering using JavaScript and Jinja by consuming backend APIs. Collaborated closely with designers and backend developers.",
+  },
+   
 ];
+
+
+
