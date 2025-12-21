@@ -15,11 +15,11 @@ function Heropage() {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="w-full h-full lg:flex items-center lg:px-10 md:px-10 px-2 lg:py-20 md:py-20 py-2">
+    <div className="w-full h-full lg:flex items-center lg:px-10 md:px-10 px-2 py-20">
       {/* Hero Details */}
       <div className="hero-details-wrapper w-full p-4 z-50">
         {/* display only in Large Screens */}
-        <div className="details-box-desktop">
+        <div className="details-box-desktop ms-30">
           <Typography variant="h3" gutterBottom sx={{ fontWeight: "bold", color: "white" }}>
             I'm
           </Typography>
@@ -37,7 +37,7 @@ function Heropage() {
         </div>
 
         {/* Dsiplay only in mobile Screens */}
-        <div className="details-box-mobile z-50">
+        <div className="details-box-mobile z-50  ms-30">
           <Typography variant="h5" gutterBottom sx={{ fontWeight: "bold", color: "white", textAlign: 'center' }}>
             I'm
           </Typography>

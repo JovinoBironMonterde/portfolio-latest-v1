@@ -44,8 +44,8 @@ export const SkillsData = [
   },
     {
     id: 9,
-    language: "PYTHON / FLASK / JINJA",
-    percentage: "80%",
+    language: "FLASK / JINJA",
+    percentage: "50%",
   },
   {
     id: 10,

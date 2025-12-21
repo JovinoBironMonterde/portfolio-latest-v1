@@ -20,11 +20,11 @@ export default function Home() {
         </div>
 
         <main className="w-full h-full">
-          <section id="hero" className="hero-wrapper pt-[90px] bg-slate-50">
+          <section id="hero" className="hero-wrapper w-full h-auto xl:h-[100vh] pt-[90px] bg-slate-50">
             <Heropage />
           </section>
 
-          <section id="aboutpage" className="bg-slate-50 px-4">
+          <section id="aboutpage" className="w-full h-auto xl:h-[100vh] flex items-center px-4 xl:px-10 mb-20">
             <Aboutpage />
           </section>
 
@@ -32,11 +32,11 @@ export default function Home() {
             <Profession />
           </section>
 
-          <section id="projects" className="">
+          <section id="projects" className="h-auto">
             <Porfoliogallery />
           </section>
 
-          <section id="contact" className="bg-slate-50">
+          <section id="contact" className="bg-slate-50 p-5 xl:p-20">
             <Contactpage />
           </section>
 

@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import InfoIcon from '@mui/icons-material/Info';
 import { projectsData } from '../components/ProjectData';
+import Tooltip from '@mui/material/Tooltip';
 
 export default function Porfoliogallery() {
   /* -------------------------------------------------------------------------- */
@@ -94,7 +95,7 @@ export default function Porfoliogallery() {
 
                     <button
                       onClick={handleClosePreview}
-                      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition z-20"
+                      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition text-base sm:text-lg z-20"
                     >
                       Back to Gallery
                     </button>
@@ -106,21 +107,28 @@ export default function Porfoliogallery() {
                     </div>
 
                     {/* Tech Stack */}
-                    <div className="w-64 h-auto space-y-2">
+                    
+                    
+         
+                    <div className="w-full h-auto space-y-2">
                       {currentProject.tech?.map((item, idx) => (
                         <div
                           key={idx}
-                          className="w-full flex items-center gap-2 text-white text-xs"
+                          className="w-auto flex items-center gap-2 text-white text-xs"
                         >
+                          <Tooltip title={item.title} placement="top">
                           <img
                             src={item.ImgLogo}
                             alt={item.title}
                             className="w-10 h-10 object-contain"
                           />
+                          </Tooltip>
                           <span>{item.title}</span>
                         </div>
                       ))}
+                    
                     </div>
+                              
 
                     {/* Links */}
                     <div className="w-full flex gap-4">
@@ -206,11 +214,12 @@ export default function Porfoliogallery() {
   /* -------------------------------------------------------------------------- */
 
   return (
-    <div className="h-auto p-3 xl:p-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="h-[80vh] p-3 xl:p-20 bg-gradient-to-br from-slate-900 flex items-center via-slate-800 to-slate-900 justify-center">
+      
       {navItems.map((item) => (
-        <li key={item.name} className="cursor-pointer text-white">
+        <li key={item.name} className="cursor-pointer text-white justify-center text-center" style={{listStyle: 'none'}}>
           <a href={item.path}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 justify-center text-center gap-4 h-[500px]">
 
               {projectsData.map((project, idx) => (
                 <div
@@ -229,7 +238,6 @@ export default function Porfoliogallery() {
                     <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold text-center px-4">
                       {project.title}
                     </h3>
-
                   </div>
 
                   {/* Image Count */}

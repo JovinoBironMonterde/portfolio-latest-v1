@@ -29,7 +29,7 @@ const lolitahotel10 = "/assets/img/lolita_heights_hotel/lolitahotel10.png";
 
 
 
-import { Code, Web, DesignServices, Javascript } from "@mui/icons-material"; // Import MUI icons
+import { Code, Web, DesignServices, Javascript } from "@mui/icons-material";
 
 export const projectsData = [
   {

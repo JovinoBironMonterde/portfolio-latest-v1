@@ -1,15 +1,14 @@
   .hero-wrapper {
     position: relative;
-    width: 100%;
-    height: auto;
-    background-color: #102c2c;
+    background-color: transparent
+    /* background-color: #102c2c;
     background-attachment: fixed;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.76)), 
         url(../assets/img/image2.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
   }
 
   .hero-contact-wrapper {

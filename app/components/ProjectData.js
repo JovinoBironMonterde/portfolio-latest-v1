@@ -5,6 +5,18 @@ const Bootstrap = "/assets/logo/Bootstrap.png";
 const HTML5    = "/assets/logo/HTML5.png";
 const CSS3     = "/assets/logo/CSS3.png";
 const GitHub   = "/assets/logo/GitHub.png";
+const JavaScript   = "/assets/logo/JavaScript.png";
+const jQuery   = "/assets/logo/jQuery.png";
+const Laravel   = "/assets/logo/Laravel.png";
+const LinkedIn   = "/assets/logo/LinkedIn.png";
+const MaterialUI   = "/assets/logo/MaterialUI.png";
+const Nextjs   = "/assets/logo/Nextjs.png";
+const Nodejs   = "/assets/logo/Nodejs.png";
+const npm   = "/assets/logo/npm.png";
+const React   = "/assets/logo/React.png";
+const Slack   = "/assets/logo/Slack.png";
+const TailwindCSS   = "/assets/logo/TailwindCSS.png";
+const Python  = "/assets/logo/Python.png";
 
 
 
@@ -38,6 +50,11 @@ const lolitahotel8 = "/assets/img/lolita_heights_hotel/lolitahotel8.png";
 const lolitahotel9 = "/assets/img/lolita_heights_hotel/lolitahotel9.png";
 const lolitahotel10 = "/assets/img/lolita_heights_hotel/lolitahotel10.png";
 
+const pspace1 = "/assets/img/pspace/pspace1.png";
+const pspace2 = "/assets/img/pspace/pspace2.png";
+const pspace3 = "/assets/img/pspace/pspace3.png";
+const pspace4 = "/assets/img/pspace/pspace4.png";
+const pspace5 = "/assets/img/pspace/pspace5.png";
 
 
 
@@ -66,6 +83,8 @@ export const projectsData = [
     src: [lolitahotel1],
     alt: 'Forest path',
     children: [lolitahotel1, lolitahotel2, lolitahotel3, lolitahotel5, lolitahotel8, lolitahotel10 ],
+        linkViewPage: "https://jovinobironmonterde.github.io/kylin_sample_project/",
+    linkViewCode: "https://github.com/JovinoBironMonterde/LoanSystem_project",
     tech: [
       { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
       { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
@@ -77,9 +96,11 @@ export const projectsData = [
     title: 'Your Project Title3',       
     description: 'Project description', 
     details: 'Additional details',  
-    src: apchu1, 
+    src: mimnu2, 
     alt: 'Wildflowers',
-    children:  [apchu1, apchu2, apchu3],
+    children:  [mimnu1, mimnu2, mimnu3],
+        linkViewPage: "https://jovinobironmonterde.github.io/kylin_sample_project/",
+    linkViewCode: "https://github.com/JovinoBironMonterde/LoanSystem_project",
     tech: [
       { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
       { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" }, 
@@ -88,89 +109,35 @@ export const projectsData = [
   },
   { 
     id: 4, 
-    title: 'Your Project Title4',       
+    title: 'Your Project Title3',       
     description: 'Project description', 
     details: 'Additional details',  
-    src: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800', 
-    alt: 'Sunset lake',
-    children: [
-      'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400'
-    ],
+    src: burgerbistro1, 
+    alt: 'Wildflowers',
+    children:  [burgerbistro1, burgerbistro2, burgerbistro3, burgerbistro4],
+        linkViewPage: "https://jovinobironmonterde.github.io/kylin_sample_project/",
+    linkViewCode: "https://github.com/JovinoBironMonterde/LoanSystem_project",
     tech: [
-        { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
-        { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
-        { ImgLogo: GitHub, title: "CSS", percentage: "80.6%" },
+      { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
+      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" }, 
+      { ImgLogo: GitHub, title: "CSS", percentage: "80.6%" },
     ],
   },
   { 
     id: 5, 
-    title: 'Your Project Title5',       
-    description: 'Project description', 
+    title: 'Pspace',       
+    description: 'Built the PSpace application from scratch as a Frontend Developer. Implemented UI and dynamic data rendering using JavaScript and Jinja by consuming backend APIs. Collaborated closely with designers and backend developers.', 
     details: 'Additional details',  
-    src: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=800', 
-    alt: 'Coastal view',
-    children: [
-      'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=400',
-      'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=400',
-      'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400'
-    ],
+    src: pspace1, 
+    alt: 'Wildflowers',
+    children:  [pspace2, pspace3, pspace4, pspace5, pspace1],
+    linkViewPage: "https://jovinobironmonterde.github.io/kylin_sample_project/",
+    linkViewCode: "https://github.com/JovinoBironMonterde/LoanSystem_project",
     tech: [
       { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
-      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
-      { ImgLogo: GitHub, title: "CSS", percentage: "80.6%" },
-    ],
-  },
-  { 
-    id: 6, 
-    title: 'Your Project Title6',       
-    description: 'Project description', 
-    details: 'Additional details',  
-    src: 'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=800', 
-    alt: 'Mountain peak',
-    children: [
-      'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=400',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400'
-    ],
-    tech: [
-      { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
-      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
-      { ImgLogo: GitHub, title: "CSS", percentage: "80.6%" },
-    ],
-  },
-  { 
-    id: 7, 
-    title: 'Your Project Title7',       
-    description: 'Project description', 
-    details: 'Additional details',  
-    src: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800', 
-    alt: 'Desert landscape',
-    children: [
-      'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400',
-      'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=400',
-      'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400'
-    ],
-    tech: [
-      { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
-      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
-      { ImgLogo: GitHub, title: "CSS", percentage: "80.6%" },
-    ],
-  },
-  { 
-    id: 8, 
-    title: 'Your Project Title8',       
-    description: 'Project description', 
-    details: 'Additional details',  
-    src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800', 
-    alt: 'Dense forest',
-    children: [
-      'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400',
-      'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=400'
-    ],
-    tech: [
-      { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
-      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" },
-      { ImgLogo: GitHub, title: "CSS", percentage: "80.6%" },
+      { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" }, 
+      { ImgLogo: Python, title: "PYTHON", percentage: "80.6%" },
+      { ImgLogo: JavaScript, title: "JAVASCRIPT", percentage: "80.6%" },
     ],
   },
 ];
