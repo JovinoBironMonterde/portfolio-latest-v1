@@ -74,12 +74,12 @@ export default function Porfoliogallery() {
           <div className="w-full max-w-[1600px] flex items-center justify-between mx-auto text-white mb-3">
             <button
               onClick={handleClosePreview}
-              className="  text-white rounded hover:text-blue-600 transition z-20"
+              className="text-white rounded hover:text-blue-600 transition z-20"
             >
               Back to Gallery
             </button>
             <h1 className="text-base sm:text-lg md:text-[40px] font-semibold hidden xl:block my-4">{currentProject.title}</h1>
-            <a href={currentProject.linkViewPage} target="_blanck">View Page</a>
+            <a href={currentProject.linkViewPage} target="_blanck" className=" text-white rounded hover:text-blue-600 transition z-20">View Page</a>
           </div>
 
           {/* Main Carousel */}
@@ -93,7 +93,7 @@ export default function Porfoliogallery() {
                 <div className="HeaderBox Header-3rem py-10 xl:py-30 px-30 xl:px-50">
                   <div className="w-full h-auto p-20 space-y-4">
 
-                    <button
+                    <button hidden
                       onClick={handleClosePreview}
                       className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition text-base sm:text-lg z-20"
                     >
@@ -101,7 +101,7 @@ export default function Porfoliogallery() {
                     </button>
 
                     {/* Project Info */}
-                    <div className="w-full text-white">
+                    <div className="w-full max-w-[600px] text-white">
                       <h1>{currentProject.title}</h1>
                       <p>{currentProject.description}</p>
                     </div>
@@ -110,25 +110,25 @@ export default function Porfoliogallery() {
                     
                     
          
-                    <div className="w-full h-auto space-y-2">
-                      {currentProject.tech?.map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="w-auto flex items-center gap-2 text-white text-xs"
-                        >
-                          <Tooltip title={item.title} placement="top">
+                    <div className="w-full h-auto space-y-2 flex items-center gap-4">
+                    {currentProject.tech?.map((item, idx) => (
+                      <Tooltip
+                        key={idx}               // ✅ key moved here
+                        title={item.title}
+                        placement="top"
+                      >
+                        <div className="w-auto flex items-center gap-2 bg-sky-950   text-white text-xs p-3 rounded-full">
                           <img
                             src={item.ImgLogo}
                             alt={item.title}
-                            className="w-10 h-10 object-contain"
+                            className="w-6 h-6 object-contain"
                           />
-                          </Tooltip>
-                          <span>{item.title}</span>
+                          {/* <span>{item.title}</span> */}
                         </div>
-                      ))}
-                    
-                    </div>
-                              
+                      </Tooltip>
+                    ))}
+                  </div>
+                       
 
                     {/* Links */}
                     <div className="w-full flex gap-4">

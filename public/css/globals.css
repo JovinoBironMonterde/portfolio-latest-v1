@@ -142,8 +142,8 @@ body::before{
 }
 
 .InfoWrapper:hover {
-  width: 80vw;
-  height: 110vh;
+  width: 60vw;
+  height: 90vh;
   transition: width .3s ease-in-out, height .3s ease-in-out;
 }
 

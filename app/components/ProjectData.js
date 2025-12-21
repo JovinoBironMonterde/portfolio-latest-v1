@@ -17,6 +17,7 @@ const React   = "/assets/logo/React.png";
 const Slack   = "/assets/logo/Slack.png";
 const TailwindCSS   = "/assets/logo/TailwindCSS.png";
 const Python  = "/assets/logo/Python.png";
+const Jinja2  = "/assets/logo/Jinja2.png";
 
 
 
@@ -125,18 +126,19 @@ export const projectsData = [
   },
   { 
     id: 5, 
-    title: 'Pspace',       
+    title: 'Pspace App',       
     description: 'Built the PSpace application from scratch as a Frontend Developer. Implemented UI and dynamic data rendering using JavaScript and Jinja by consuming backend APIs. Collaborated closely with designers and backend developers.', 
     details: 'Additional details',  
     src: pspace1, 
     alt: 'Wildflowers',
     children:  [pspace2, pspace3, pspace4, pspace5, pspace1],
-    linkViewPage: "https://jovinobironmonterde.github.io/kylin_sample_project/",
+    linkViewPage: "https://pspace.app/",
     linkViewCode: "https://github.com/JovinoBironMonterde/LoanSystem_project",
     tech: [
       { ImgLogo: Bootstrap, title: "JAVASCRIPT", percentage: "52.3%" },
       { ImgLogo: CSS3, title: "HTML", percentage: "95.3%" }, 
-      { ImgLogo: Python, title: "PYTHON", percentage: "80.6%" },
+      { ImgLogo: Python, title: "PYTHON / FLASK", percentage: "80.6%" },
+      { ImgLogo: Jinja2, title: "JINJA2", percentage: "80.6%" },
       { ImgLogo: JavaScript, title: "JAVASCRIPT", percentage: "80.6%" },
     ],
   },

@@ -33,6 +33,31 @@ function Aboutpage() {
         <div className="button">
 
         </div>
+
+        <div hidden className="">
+           <div>
+            <h2 className="text-3xl font-semibold text-white">Jovino Monterde</h2>
+            <p className="text-blue-600 text-lg font-medium">Front-End Developer</p>
+          </div>
+
+          <p className="text-white text-base leading-relaxed">
+            I am a results-driven Front-End Developer with more than 
+            <strong> 2 years of hands-on experience</strong> building modern, responsive, and user-focused 
+            web applications. I specialize in creating clean UI, smooth interactions, and scalable 
+            front-end architecture using cutting-edge JavaScript frameworks.
+          </p>
+
+          <p className="text-white text-base leading-relaxed">
+            My work spans e-commerce platforms, property management systems, and various 
+            business applications. I thrive in collaborative environments and enjoy transforming 
+            design concepts into polished digital experiences.
+          </p>
+
+          <p className="text-white text-base leading-relaxed">
+            I constantly explore new tools, technologies, and UI trends to elevate my craft and 
+            deliver products that are both visually appealing and highly performant.
+          </p>
+        </div>
        
       </div>
       {/* <div className="absolute w-full left-0 bottom-0 z-10">
