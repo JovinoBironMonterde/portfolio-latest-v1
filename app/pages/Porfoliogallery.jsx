@@ -79,7 +79,18 @@ export default function Porfoliogallery() {
               Back to Gallery
             </button>
             <h1 className="text-base sm:text-lg md:text-[40px] font-semibold hidden xl:block my-4">{currentProject.title}</h1>
-            <a href={currentProject.linkViewPage} target="_blanck" className=" text-white rounded hover:text-blue-600 transition z-20">View Page</a>
+            {currentProject.linkViewPage && (
+              <a
+                href={currentProject.linkViewPage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white rounded hover:text-blue-600 transition z-20"
+              >
+                View Page
+              </a>
+            )}
+
+        
           </div>
 
           {/* Main Carousel */}
@@ -88,7 +99,7 @@ export default function Porfoliogallery() {
 
               {/* Info Box */}
               <div className="InfoWrapper absolute left-0 top-0">
-                <InfoIcon className="absolute left-1 md:left-5 top-1 md:top-5  text-base md:text-xl text-white" />
+                <InfoIcon className="absolute left-1 md:left-3 top-1 md:top-3  text-base md:text-xl text-white" />
 
                 <div className="HeaderBox Header-3rem py-10 xl:py-30 px-30 xl:px-50">
                   <div className="w-full h-auto p-20 space-y-4">
@@ -131,7 +142,7 @@ export default function Porfoliogallery() {
                        
 
                     {/* Links */}
-                    <div className="w-full flex gap-4">
+                    {/* <div className="w-full flex gap-4">
                       <a
                         href={currentProject.linkViewPage}
                         target="_blanck"
@@ -144,7 +155,7 @@ export default function Porfoliogallery() {
                       >
                         View Code
                       </a>
-                    </div>
+                    </div> */}
 
                   </div>
                 </div>

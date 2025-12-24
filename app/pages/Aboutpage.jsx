@@ -9,7 +9,7 @@ import RevealAnimation from '../components/RevealAnimation';
 function Aboutpage() {
   return (
     <div className='relative bg-slate-300 w-full max-w-[1600px] mx-auto rounded-3xl h-auto lg:flex md:flex items-center '>
-      <div className="relative image-profile-image w-full flex justify-center p-20 z-50 reveal">
+      <div className="relative image-profile-image w-full flex justify-center py-10 px-12 xl:p-20 z-50 reveal">
         {/* <div className="absolute w-60 h-52 left-0 top-0">
           <svg2 />
         </div>
@@ -17,7 +17,7 @@ function Aboutpage() {
         <span className="absolute w-[350px] h-[600px] rounded-tr-full rounded-br-full -left-16 top-0 bg-slate-400"></span> */}
         <Image className='z-10' src={AboutImage} alt="Your Image Alt Text" width={440} height={440} />
       </div>
-      <div className="profile-image w-full mb-28 lg:pr-20 z-50 reveal fade-bottom p-4">
+      <div className="profile-image w-full mb-4 xl:mb-28 lg:pr-20 z-50 reveal fade-bottom p-4">
         <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold', color: 'black' }}>
         About
         </Typography>

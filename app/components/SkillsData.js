@@ -30,7 +30,7 @@ export const SkillsData = [
   {
     id: 6,
     language: "JQUERY",
-    percentage: "80%",
+    percentage: "70%",
   },
   {
     id: 7,
@@ -45,7 +45,7 @@ export const SkillsData = [
     {
     id: 9,
     language: "FLASK / JINJA",
-    percentage: "50%",
+    percentage: "60%",
   },
   {
     id: 10,

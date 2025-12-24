@@ -26,11 +26,15 @@ function Contactpage() {
             </div>
             <div className="flex mb-4">
               <ContactPhoneIcon  sx={{ mr: { xs: 1, sm: 2, color: '#52525b' } }} />
-              <span className='text-zinc-600'>09704566075</span>
+              <span className='text-zinc-600'>09704566075 (TNT)</span>
+            </div>
+            <div className="flex mb-4">
+              <ContactPhoneIcon  sx={{ mr: { xs: 1, sm: 2, color: '#52525b' } }} />
+              <span className='text-zinc-600'>09973401144 (TM)</span>
             </div>
             <div className="flex mb-10">
               <MailIcon sx={{ mr: 2, color: '#52525b' }} />
-              <span className='text-zinc-600'>jovinobironmonterdejr2024@gmail.com</span>
+              <span className='text-zinc-600'>jovinobiro.monterdejr@gmail.com</span>
             </div>
             <div className="flex gap-4 justify-between lg:justify-start">
               <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300' >

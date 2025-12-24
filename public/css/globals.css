@@ -126,8 +126,8 @@ body::before{
 
 
 .InfoWrapper {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-bottom-right-radius: 100%;
   transition: width .3s ease-in-out, height .3s ease-in-out;
   background-color: #171717d7;
