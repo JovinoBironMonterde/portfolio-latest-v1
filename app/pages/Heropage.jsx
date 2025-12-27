@@ -11,7 +11,7 @@ import TypingLoop from '../components/TypingLoop';
 function Heropage() {
   const openResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1lyvUJQL1GOubKdqY4D-n96vwwBzrE2E9/view?usp=sharing",
+      "https://drive.google.com/file/d/1Lk-tpj-E8KljqWgRScaEPxDykjNPx8zO/view?usp=sharing",
       "_blank"
     );
   };

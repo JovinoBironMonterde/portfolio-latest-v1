@@ -38,7 +38,7 @@ export const ExperienceData = [
   },
   {
     id: 6,
-    date: "February 2025 - Current",
+    date: "February 2025",
     company: "Pspace - Project Base",
     position: "Front-End Web Developer",
     description: "Built the PSpace application from scratch as a Frontend Developer. Implemented UI and dynamic data rendering using JavaScript and Jinja by consuming backend APIs. Collaborated closely with designers and backend developers.",
