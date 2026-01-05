@@ -36,7 +36,7 @@ function Contactpage() {
               <MailIcon sx={{ mr: 2, color: '#52525b' }} />
               <span className='text-zinc-600'>jovinobiro.monterdejr@gmail.com</span>
             </div>
-            <div className="flex gap-4 justify-between lg:justify-start">
+            <div className="flex gap-4 justify-between lg:justify-start mb-10">
               <a
                 href="https://wa.me/639704566075"
                 target="_blank"
