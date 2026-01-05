@@ -37,18 +37,24 @@ function Contactpage() {
               <span className='text-zinc-600'>jovinobiro.monterdejr@gmail.com</span>
             </div>
             <div className="flex gap-4 justify-between lg:justify-start">
-              <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300' >
-                <WhatsAppIcon  />
+              <a
+                href="https://wa.me/639704566075"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300"
+              >
+                <WhatsAppIcon />
               </a>
+
               <a href="https://www.facebook.com/messages/e2ee/t/7199980096767454" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <FacebookIcon  />
               </a>
-              {/* <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
+              <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <TwitterIcon />
               </a>
               <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <InstagramIcon  />
-              </a> */}
+              </a>
               <a href="https://www.linkedin.com/in/jovinobironmonterde/" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
                 <LinkedInIcon  />
               </a>
