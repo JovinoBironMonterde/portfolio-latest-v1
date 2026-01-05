@@ -28,7 +28,7 @@ export default function Home() {
             <Aboutpage />
           </section>
 
-          <section id="profession" className="bg-sky-950 py-20 px-4">
+          <section id="profession" className="bg-sky-950 py-10 xl:py-20 px-4">
             <Profession />
           </section>
 
