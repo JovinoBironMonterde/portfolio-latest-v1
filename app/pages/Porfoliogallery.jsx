@@ -111,7 +111,7 @@ export default function Porfoliogallery() {
                     </div>
 
                     {/* Tech Stack */}
-                    <div className="w-full h-auto space-y-2 flex items-center gap-4">
+                    <div className="w-full h-auto mt-0 flex items-center gap-4">
                       {currentProject.tech?.map((item, idx) => (
                         <Tooltip
                           key={idx}               // ✅ key moved here
@@ -224,14 +224,14 @@ export default function Porfoliogallery() {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="w-full h-auto space-y-2 flex items-center justify-center gap-4">
+                <div className="w-full mt-0 h-auto flex items-center justify-center gap-4">
                   {currentProject.tech?.map((item, idx) => (
                     <Tooltip
                       key={idx}  
                       title={item.title}
                       placement="top"
                     >
-                      <div className="w-auto flex items-center gap-2 bg-sky-950   text-white text-xs p-3 rounded-full">
+                      <div className="w-auto flex items-center mt-0 gap-2 bg-sky-950 text-white text-xs p-3 rounded-full">
                         <img
                           src={item.ImgLogo}
                           alt={item.title}
