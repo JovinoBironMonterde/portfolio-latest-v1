@@ -64,10 +64,10 @@ export default function Porfoliogallery() {
     const currentChildren = currentProject.children;
 
     return (
-      <div className="h-auto py-[94px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900  px-4">
+      <div className="h-auto py-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900  px-4">
         <div className="mx-auto">
-          <div className="w-full max-w-[1600px] text-center xl:hidden mx-auto text-white mb-3">
-            <h1 className="text-base sm:text-lg md:text-[40px] font-semibold my-4">{currentProject.title}</h1>
+          <div hidden className="w-full max-w-[1600px] text-center xl:hidden mx-auto text-white mb-10">
+            <h1 className="text-2xl font-semibold my-4">{currentProject.title}</h1>
           </div>
           
           {/* Header */}
@@ -95,68 +95,40 @@ export default function Porfoliogallery() {
 
           {/* Main Carousel */}
           <div ref={topRef} className="relative overflow-hidden">
-            <div className="relative max-w-[1600px] w-full md:h-[50vh] lg:h-[50vh] xl:h-[82vh] aspect-video rounded-xl overflow-hidden mx-auto">
+            <div className="relative mb-4 max-w-[1600px] w-full md:h-[50vh] lg:h-[50vh] xl:h-[82vh] aspect-video rounded-xl overflow-hidden mx-auto">
 
               {/* Info Box */}
-              <div className="InfoWrapper absolute left-0 top-0">
+              <div className="InfoWrapper hidden xl:block absolute left-0 top-0">
                 <InfoIcon className="absolute left-1 md:left-3 top-1 md:top-3  text-base md:text-xl text-white" />
 
                 <div className="HeaderBox Header-3rem py-10 xl:py-30 px-30 xl:px-50">
                   <div className="w-full h-auto p-20 space-y-4">
 
-                    <button hidden
-                      onClick={handleClosePreview}
-                      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition text-base sm:text-lg z-20"
-                    >
-                      Back to Gallery
-                    </button>
-
                     {/* Project Info */}
                     <div className="w-full max-w-[600px] text-white">
-                      <h1>{currentProject.title}</h1>
+                      <span className='text-sm xl:text-3xl'>{currentProject.title}</span>
                       <p>{currentProject.description}</p>
                     </div>
 
                     {/* Tech Stack */}
-                    
-                    
-         
                     <div className="w-full h-auto space-y-2 flex items-center gap-4">
-                    {currentProject.tech?.map((item, idx) => (
-                      <Tooltip
-                        key={idx}               // ✅ key moved here
-                        title={item.title}
-                        placement="top"
-                      >
-                        <div className="w-auto flex items-center gap-2 bg-sky-950   text-white text-xs p-3 rounded-full">
-                          <img
-                            src={item.ImgLogo}
-                            alt={item.title}
-                            className="w-6 h-6 object-contain"
-                          />
-                          {/* <span>{item.title}</span> */}
-                        </div>
-                      </Tooltip>
-                    ))}
-                  </div>
-                       
-
-                    {/* Links */}
-                    {/* <div className="w-full flex gap-4">
-                      <a
-                        href={currentProject.linkViewPage}
-                        target="_blanck"
-                      >
-                        View Page
-                      </a>
-                      <a
-                        href={currentProject.linkViewCode}
-                        target="_blanck"
-                      >
-                        View Code
-                      </a>
-                    </div> */}
-
+                      {currentProject.tech?.map((item, idx) => (
+                        <Tooltip
+                          key={idx}               // ✅ key moved here
+                          title={item.title}
+                          placement="top"
+                        >
+                          <div className="w-auto flex items-center gap-2 bg-sky-950   text-white text-xs p-3 rounded-full">
+                            <img
+                              src={item.ImgLogo}
+                              alt={item.title}
+                              className="w-6 h-6 object-contain"
+                            />
+                            {/* <span>{item.title}</span> */}
+                          </div>
+                        </Tooltip>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -168,10 +140,9 @@ export default function Porfoliogallery() {
                 className="w-full h-full object-cover"
               />
 
-              {/* Child Carousel */}
-              <div className="absolute left-1/2 -translate-x-1/2 bottom-4 md:left-auto md:translate-x-0 md:right-4">
+              {/* Child Carousel for Desktop */}
+              <div className="absolute left-1/2 -translate-x-1/2 hidden xl:block bottom-4 md:left-auto md:translate-x-0 md:right-4">
                 <div className="flex items-center gap-2">
-
                   <button
                     onClick={goToChildPrevious}
                     className="text-white hover:text-gray-300 transition-colors"
@@ -213,6 +184,64 @@ export default function Porfoliogallery() {
                 </div>
               </div>
 
+              {/* Child Carousel for Mobile */}
+      
+
+            </div>
+            <div className="w-full block xl:hidden">
+              <div className="flex items-center justify-evenly mb-5 gap-2">
+
+                <div className="flex gap-1 overflow-hidden">
+                  {currentChildren.map((childSrc, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => setChildImageIndex(idx)}
+                      className={`w-55
+                        h-14 sm:h-20 md:h-20 lg:h-30 xl:h-30
+                        rounded-md xl:rounded-2xl overflow-hidden cursor-pointer
+                        transition-all p-0.5 xl:p-1 bg-sky-950
+                        ${
+                          idx === childImageIndex
+                            ? 'opacity-100'
+                            : 'opacity-40 hover:opacity-75'
+                        }`}
+                    >
+                      <img
+                        src={childSrc}
+                        alt={`Child ${idx + 1}`}
+                        className="w-full h-full object-cover rounded-md xl:rounded-2xl"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+              <div className="w-full h-auto p-2 ">
+                {/* Project Info */}
+                <div className="w-full text-center text-white">
+                  <h1 className='text-2xl mb-5'>{currentProject.title}</h1>
+                  <p className='mb-3'>{currentProject.description}</p>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="w-full h-auto space-y-2 flex items-center justify-center gap-4">
+                  {currentProject.tech?.map((item, idx) => (
+                    <Tooltip
+                      key={idx}  
+                      title={item.title}
+                      placement="top"
+                    >
+                      <div className="w-auto flex items-center gap-2 bg-sky-950   text-white text-xs p-3 rounded-full">
+                        <img
+                          src={item.ImgLogo}
+                          alt={item.title}
+                          className="w-6 h-6 object-contain"
+                        />
+                      </div>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
