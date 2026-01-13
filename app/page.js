@@ -36,7 +36,7 @@ export default function Home() {
             <Porfoliogallery />
           </section>
 
-          <section id="contact" className="bg-slate-50 p-5 xl:p-20">
+          <section id="contact" className="bg-slate-50">
             <Contactpage />
           </section>
 

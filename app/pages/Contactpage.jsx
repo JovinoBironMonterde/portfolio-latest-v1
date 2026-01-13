@@ -12,13 +12,14 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ContactMap from '../components/ContactMap';
 
 
 
 function Contactpage() {
   return (
     <div className='w-full h-auto'>
-      <div className="lg:flex items-center">
+      <div className="lg:flex items-center mb-10 xl:mb-0 p-5 xl:p-20">
         <div className="w-full  mx-auto lg:p-10 md:p-10 p-2">
           <div className="w-full max-w-[400px] mx-auto">
             <div className="mb-20 ">
@@ -65,6 +66,10 @@ function Contactpage() {
         <div className="w-full">
         <FormComponent />
         </div>
+      </div>
+
+      <div className="w-full">
+        <ContactMap />
       </div>
     </div>
   )
