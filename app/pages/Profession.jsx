@@ -23,7 +23,7 @@ function Profession() {
       <div className="">
       {SkillsData.map((skills, index) => (
       <div key={skills.id} className={`Content-${index + 1} w-full h-auto mb-3 xl:mb-10 reveal fade-left`}>
-        <div className='w-full h-16 rounded-lg relative bg-slate-300 overflow-hidden'>
+        <div className='w-full h-16 rounded-xl relative bg-zinc-200 overflow-hidden'>
           <div className="absolute lg:right-4 md:right-4 xs:left-4 p-3 bottom-2 z-50 text-zinc-200">{skills.language}</div>
           <div className={`inner-bar h-16  bg-sky-800`} style={{ width: skills.percentage }}>
             <span className='absolute w-full lg:text-left md:text-left text-right z-50 top-0 translate-y-4 px-3 text-white text-3xl'> {skills.percentage}</span>
@@ -41,7 +41,7 @@ function Profession() {
       {ExperienceData.map((ExperienceData, index) => (
       <div key={ExperienceData.id} className={`${index + 1} experience-box mb-14 reveal fade-bottom`}>
           <Typography sx={{ fontWeight: 'bold', color: 'black', mb: 2,  lineHeight: 'normal', mb:2 }}>
-            <span className="py-2 px-4 mb-5 bg-sky-100 rounded-full text-sky-800 text-xs">
+            <span className="py-2 px-4 mb-5 bg-[#1693a117] rounded-full text-sky-100 text-xs">
               {ExperienceData.date}
             </span>
           </Typography>

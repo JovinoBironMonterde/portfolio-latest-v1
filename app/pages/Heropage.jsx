@@ -112,7 +112,7 @@ function Heropage() {
       </div>
 
       {/* Contact Form */}
-      <div className="w-full hidden">
+      <div className="w-full hidden xl:block">
         <FormComponent />
       </div>
     </div>

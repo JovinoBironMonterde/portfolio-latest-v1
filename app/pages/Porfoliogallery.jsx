@@ -157,19 +157,21 @@ export default function Porfoliogallery() {
                         onClick={() => setChildImageIndex(idx)}
                         className={`w-12 sm:w-18 md:w-20 lg:w-28 xl:w-45
                           h-14 sm:h-20 md:h-20 lg:h-30 xl:h-30
-                          rounded-md xl:rounded-2xl overflow-hidden cursor-pointer
-                          transition-all p-0.5 xl:p-1 bg-sky-950
+                          rounded-md xl:rounded-xl overflow-hidden cursor-pointer
+                          transition-all p-0.5  bg-sky-950 relative
                           ${
                             idx === childImageIndex
-                              ? 'opacity-100'
-                              : 'opacity-40 hover:opacity-75'
+                              ? "before:content-[''] before:absolute before:inset-0 before:border-2 before:border-[#1692a1] before:rounded-xl"
+                              : "bg-sky-100 hover:opacity-75"
                           }`}
                       >
+                        <div className="w-full h-full overflow-hidden rounded-md xl:rounded-xl">
                         <img
                           src={childSrc}
                           alt={`Child ${idx + 1}`}
-                          className="w-full h-full object-cover rounded-md xl:rounded-2xl"
+                          className="w-full h-full object-cover rounded-md xl:rounded-xl hover:scale-105 transition-all"
                         />
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -254,17 +256,17 @@ export default function Porfoliogallery() {
   /* -------------------------------------------------------------------------- */
 
   return (
-    <div className="h-[80vh] p-3 xl:p-20 bg-gradient-to-br from-slate-900 flex items-center via-slate-800 to-slate-900 justify-center">
+    <div className="h-auto p-3 md:p-10 xl:p-20 bg-gradient-to-br from-slate-900 flex items-center via-slate-800 to-slate-900 justify-center">
       
       {navItems.map((item) => (
         <li key={item.name} className="cursor-pointer text-white justify-center text-center" style={{listStyle: 'none'}}>
           <a href={item.path}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 justify-center text-center gap-4 h-[500px]">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center text-center gap-4 h-auto">
 
               {projectsData.map((project, idx) => (
                 <div
                   key={project.id}
-                  className="group relative overflow-hidden rounded-lg cursor-pointer"
+                  className="group relative overflow-hidden rounded-lg cursor-pointer min-h-[150px] lg:min-h-[300px] xl:min-h-[300px]"
                   onClick={() => handleSelectProject(idx)}
                 >
                   <img

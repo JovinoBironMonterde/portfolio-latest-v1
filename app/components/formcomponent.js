@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 
 function FormComponent() {
   return (
-    <div className="w-full max-w-[600px] rounded-xl shadow-2xl mx-auto lg:p-10 md:p-10 p-6 z-50 bg-slate-50">
+    <div className="w-full max-w-[600px] rounded-xl shadow-2xl mx-auto lg:p-10 md:p-10 p-6 z-50 bg-slate-50 ">
       <form
         action="https://getform.io/f/ayvqklrb"
         method="POST"

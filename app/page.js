@@ -20,7 +20,7 @@ export default function Home() {
         </div>
 
         <main className="w-full h-full">
-          <section id="hero" className="hero-wrapper w-full h-auto xl:h-[100vh] pt-[90px] bg-slate-50">
+          <section id="hero" className="hero-wrapper w-full h-auto pt-[90px] bg-slate-50">
             <Heropage />
           </section>
 

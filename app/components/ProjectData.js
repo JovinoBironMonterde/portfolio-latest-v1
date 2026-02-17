@@ -58,6 +58,12 @@ const pspace3 = "/assets/img/pspace/pspace3.png";
 const pspace4 = "/assets/img/pspace/pspace4.png";
 const pspace5 = "/assets/img/pspace/pspace5.png";
 
+const sedney1 = "/assets/img/sydney/sedney1.png";
+const sedney2 = "/assets/img/sydney/sedney2.png";
+const sedney3 = "/assets/img/sydney/sedney3.png";
+const sedney4 = "/assets/img/sydney/sedney4.png";
+const sedney5 = "/assets/img/sydney/sedney5.png";
+
 
 
 export const projectsData = [
@@ -147,4 +153,23 @@ export const projectsData = [
       { ImgLogo: JavaScript, title: "JAVASCRIPT", percentage: "80.6%" },
     ],
   },
+{ 
+  id: 6, 
+  title: 'Sydney Health-Themed',       
+  description: `This is a frontend-only practice website built using Next.js and Tailwind CSS. The project showcases a modern, fully responsive homepage inspired by a Sydney-based health and research organization in Sydney, Australia.
+                The main objective of this project is to practice advanced layout structuring, reusable component development, and responsive UI design using a clean and professional design system.`,
+  details: `Key features include a hero carousel, news and events section, resource cards, impact highlight section, partner logos grid, and a structured multi-column footer. 
+            The project focuses purely on frontend implementation with reusable components and responsive layouts. No backend integration or API connectivity is included.`,
+  Status: 'In Progress',
+  src: sedney1, 
+  alt: 'Sydney practice website homepage preview',
+  children: [sedney2, sedney3, sedney4, sedney5, sedney1],
+  linkViewPage: "https://nextjs-practice-page-eight.vercel.app/",
+  linkViewCode: "",
+  tech: [
+    { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
+    { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
+  ],
+}
+
 ];

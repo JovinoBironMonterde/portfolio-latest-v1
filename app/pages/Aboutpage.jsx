@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Typography from '@mui/material/Typography';
-import AboutImage from '../../public/assets/img/NewProfile.png'; 
+import AboutImage from '../../public/assets/img/6.png'; 
 import WaveHaikei from '../components/WaveSVG';
 import svg2 from '../components/svg2';
 import RevealAnimation from '../components/RevealAnimation';
@@ -18,18 +18,19 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function Aboutpage() {
   return (
     <div className='relative bg-slate-300 w-full max-w-[1600px] mx-auto rounded-3xl h-auto lg:flex md:flex items-center '>
-      <div className="relative image-profile-image w-full flex justify-center py-10 px-12 xl:p-20 z-50 reveal">
+      <div className="relative image-profile-image w-full flex justify-center p-5 xl:p-10 z-50 reveal">
         {/* <div className="absolute w-60 h-52 left-0 top-0">
           <svg2 />
         </div>
         <span className="absolute w-[600px] h-[600px] rounded-tr-full rounded-br-full -left-16 -top-56 bg-slate-400"></span>
         <span className="absolute w-[350px] h-[600px] rounded-tr-full rounded-br-full -left-16 top-0 bg-slate-400"></span> */}
-        <Image className='z-10' src={AboutImage} alt="Your Image Alt Text" width={440} height={440} />
+        <Image className='z-10' src={AboutImage} alt="Your Image Alt Text" width={540} height={540} />
       </div>
-      <div className="profile-image w-full mb-4 xl:mb-28 lg:pr-20 z-50 reveal fade-bottom p-4">
+      <div className="profile-image w-full flex items-center lg:pr-20 z-50 reveal fade-bottom p-4">
+        <div className="w-full h-auto">
         <div className="mb-10">
-          <div className="mb-20">
-          <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold', color: 'black' }}>About</Typography>
+          <div className="mb-0">
+          <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold', color: '#1692a1' }}>About</Typography>
           </div>
           <Typography sx={{ fontWeight: 'normal', color: 'black', mb: '80px', marginBottom: '0' }}>
             <span className="reveal fade-bottom">
@@ -42,7 +43,7 @@ function Aboutpage() {
           </Typography>
         </div>
         
-        <div className="flex gap-4 justify-between lg:justify-start mb-10">
+        <div className="flex gap-4 justify-between lg:justify-start">
           <a href="https://github.com/JovinoBironMonterde" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300">
             <GitHubIcon />
           </a>
@@ -58,6 +59,7 @@ function Aboutpage() {
           <a href="https://www.linkedin.com/in/jovinobironmonterde/" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
             <LinkedInIcon  />
           </a>
+        </div>
         </div>
 
         {/* <div hidden className="mn-10">
