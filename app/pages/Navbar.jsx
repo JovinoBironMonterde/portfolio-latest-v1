@@ -1,3 +1,4 @@
+// C:\xampp\htdocs\portfolio\app\pages\Navbar.jsx
 "use client";
 import React, { useState, useEffect } from "react";
 import {

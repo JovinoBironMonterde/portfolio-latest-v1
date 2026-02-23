@@ -1,3 +1,4 @@
+// C:\xampp\htdocs\portfolio\app\pages\Projects.jsx
 "use client";
 import Image from "next/image";
 import dynamic from "next/dynamic";

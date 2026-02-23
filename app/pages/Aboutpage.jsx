@@ -1,96 +1,203 @@
+// C:\xampp\htdocs\portfolio\app\pages\Aboutpage.jsx
 import React from 'react'
 import Image from 'next/image'
-import Typography from '@mui/material/Typography';
-import AboutImage from '../../public/assets/img/6.png'; 
-import WaveHaikei from '../components/WaveSVG';
-import svg2 from '../components/svg2';
+// import AboutImage from '../../public/assets/img/6.png';
+import AboutImage from '../../public/assets/img/sdsdsd.png';
 import RevealAnimation from '../components/RevealAnimation';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
-
 import MailIcon from '@mui/icons-material/Mail';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import DownloadIcon from '@mui/icons-material/Download';
+
+const socialLinks = [
+  { href: "https://github.com/JovinoBironMonterde", icon: <GitHubIcon fontSize="small" />, label: "GitHub" },
+  { href: "https://www.facebook.com/messages/e2ee/t/7199980096767454", icon: <FacebookIcon fontSize="small" />, label: "Facebook" },
+  { href: "https://wa.me/1234567890", icon: <TwitterIcon fontSize="small" />, label: "Twitter" },
+  { href: "https://wa.me/1234567890", icon: <InstagramIcon fontSize="small" />, label: "Instagram" },
+  { href: "https://www.linkedin.com/in/jovinobironmonterde/", icon: <LinkedInIcon fontSize="small" />, label: "LinkedIn" },
+];
+
+const highlights = [
+  { value: '2+', label: 'Years Experience' },
+  { value: '10+', label: 'Projects Built' },
+  { value: '5+', label: 'Technologies' },
+];
 
 function Aboutpage() {
   return (
-    <div className='relative bg-slate-300 w-full max-w-[1600px] mx-auto rounded-3xl h-auto lg:flex md:flex items-center '>
-      <div className="relative image-profile-image w-full flex justify-center p-5 xl:p-10 z-50 reveal">
-        {/* <div className="absolute w-60 h-52 left-0 top-0">
-          <svg2 />
+    <div className='relative w-full max-w-[1300px] mx-auto rounded-3xl overflow-hidden lg:flex md:flex items-stretch'>
+
+      {/* ── Left: Image Panel ── */}
+      <div
+        className="relative image-profile-image w-full lg:w-[45%] flex justify-center items-end overflow-hidden reveal"
+        style={{ background: 'linear-gradient(135deg, #0e2a2d 0%, #0d1117 60%, #0a2428 100%)', minHeight: '480px' }}
+      >
+        {/* Decorative teal circle behind image */}
+        <div
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[340px] h-[340px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(22,146,161,0.25) 0%, transparent 70%)' }}
+        />
+
+        {/* Teal ring accent */}
+        <div
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full border border-[#1692a1]/20"
+        />
+
+        {/* Corner accent lines */}
+        <div className="absolute top-6 left-6 w-10 h-10 border-t-2 border-l-2 border-[#1692a1]/50 rounded-tl-lg" />
+        <div className="absolute bottom-6 right-6 w-10 h-10 border-b-2 border-r-2 border-[#1692a1]/50 rounded-br-lg" />
+
+        {/* Profile image */}
+        <div className="relative z-10 px-8 pt-10 pb-0">
+          <Image
+            className='z-10 drop-shadow-2xl'
+            src={AboutImage}
+            alt="Jovino Monterde"
+            width={210}
+            height={210}
+            style={{ objectFit: 'contain' }}
+          />
         </div>
-        <span className="absolute w-[600px] h-[600px] rounded-tr-full rounded-br-full -left-16 -top-56 bg-slate-400"></span>
-        <span className="absolute w-[350px] h-[600px] rounded-tr-full rounded-br-full -left-16 top-0 bg-slate-400"></span> */}
-        <Image className='z-10' src={AboutImage} alt="Your Image Alt Text" width={540} height={540} />
+
+        {/* Stats strip at bottom of image panel */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-around py-4 px-4 z-20"
+          style={{ background: 'rgba(13,17,23,0.75)', backdropFilter: 'blur(8px)', borderTop: '1px solid rgba(22,146,161,0.15)' }}
+        >
+          {highlights.map((stat, i) => (
+            <div key={i} className="text-center">
+              <p className="text-xl font-black" style={{ color: '#1692a1' }}>{stat.value}</p>
+              <p className="text-[9px] uppercase tracking-widest font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="profile-image w-full flex items-center lg:pr-20 z-50 reveal fade-bottom p-4">
-        <div className="w-full h-auto">
-        <div className="mb-10">
-          <div className="mb-0">
-          <Typography variant="h3" gutterBottom sx={{ fontWeight: 'bold', color: '#1692a1' }}>About</Typography>
-          </div>
-          <Typography sx={{ fontWeight: 'normal', color: 'black', mb: '80px', marginBottom: '0' }}>
-            <span className="reveal fade-bottom">
-            I'm <b>Jovi Monterde,</b> a front-end developer with over 2 years of experience creating responsive and user-friendly web applications. I enjoy turning designs into functional, pixel-perfect websites and have worked on a variety of projects, including single-page apps and e-commerce platforms.
-            </span>
-          <br/><br/>
-          <span className="reveal fade-bottom">
-          I'm always open to new opportunities and collaborations. Feel free to reach out if you'd like to work together or chat about web development!
-          </span>
-          </Typography>
-        </div>
-        
-        <div className="flex gap-4 justify-between lg:justify-start">
-          <a href="https://github.com/JovinoBironMonterde" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300">
-            <GitHubIcon />
-          </a>
-          <a href="https://www.facebook.com/messages/e2ee/t/7199980096767454" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
-            <FacebookIcon  />
-          </a>
-          <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
-            <TwitterIcon />
-          </a>
-          <a href="https://wa.me/1234567890" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
-            <InstagramIcon  />
-          </a>
-          <a href="https://www.linkedin.com/in/jovinobironmonterde/" target="_blank" className='p-3 rounded-full bg-[#1693a117] text-[#1692a1] hover:bg-[#1693a1] hover:text-white transition duration-300'>
-            <LinkedInIcon  />
-          </a>
-        </div>
-        </div>
 
-        {/* <div hidden className="mn-10">
-           <div>
-            <h2 className="text-3xl font-semibold text-white">Jovino Monterde</h2>
-            <p className="text-blue-600 text-lg font-medium">Front-End Developer</p>
+      {/* ── Right: Content Panel ── */}
+      <div
+        className="profile-image w-full lg:w-[55%] flex items-center z-10 reveal fade-bottom"
+        style={{ background: 'linear-gradient(135deg, #f8fafb 0%, #eef2f5 100%)' }}
+      >
+        <div className="w-full h-auto px-8 lg:px-14 py-14">
+
+          {/* Section label */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-6 h-[2px] rounded-full bg-[#1692a1]" />
+            <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#1692a1]">About Me</span>
           </div>
 
-          <p className="text-white text-base leading-relaxed">
-            I am a results-driven Front-End Developer with more than 
-            <strong> 2 years of hands-on experience</strong> building modern, responsive, and user-focused 
-            web applications. I specialize in creating clean UI, smooth interactions, and scalable 
-            front-end architecture using cutting-edge JavaScript frameworks.
+          {/* Heading */}
+          <h2
+            className="font-black leading-tight mb-2"
+            style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', color: '#0d1117', letterSpacing: '-0.02em' }}
+          >
+            Jovi <span style={{ color: '#1692a1' }}>Monterde</span>
+          </h2>
+
+          {/* Sub-title */}
+          <p className="text-sm font-semibold tracking-wide mb-6" style={{ color: 'rgba(0,0,0,0.35)' }}>
+            Frontend Developer · Freelancer
           </p>
 
-          <p className="text-white text-base leading-relaxed">
-            My work spans e-commerce platforms, property management systems, and various 
-            business applications. I thrive in collaborative environments and enjoy transforming 
-            design concepts into polished digital experiences.
-          </p>
+          {/* Divider */}
+          <div
+            className="w-12 h-[3px] rounded-full mb-8"
+            style={{ background: 'linear-gradient(90deg, #1692a1, transparent)' }}
+          />
 
-          <p className="text-white text-base leading-relaxed">
-            I constantly explore new tools, technologies, and UI trends to elevate my craft and 
-            deliver products that are both visually appealing and highly performant.
-          </p>
-        </div> */}
+          {/* Bio text */}
+          <div className="space-y-4 mb-10">
+            <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.65)' }}>
+              I'm a <strong className="font-semibold text-[#0d1117]">front-end developer</strong> with over
+              2 years of experience creating responsive and user-friendly web applications. I enjoy turning
+              designs into functional, pixel-perfect websites and have worked on a variety of projects —
+              from single-page apps to full e-commerce platforms.
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.65)' }}>
+              I'm always open to new opportunities and collaborations. Feel free to reach out if you'd like
+              to work together or chat about web development!
+            </p>
+          </div>
+
+          {/* Info chips */}
+          <div className="flex flex-wrap gap-2 mb-10">
+            {['React / Next.js', 'Tailwind CSS', 'MUI', 'Bootstarp'].map((tech) => (
+              <span
+                key={tech}
+                className="text-[11px] font-semibold px-3 py-1.5 rounded-full"
+                style={{
+                  background: 'rgba(22,146,161,0.08)',
+                  color: '#1692a1',
+                  border: '1px solid rgba(22,146,161,0.2)',
+                }}
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* Action row */}
+          <div className="flex items-center gap-5 flex-wrap">
+            {/* Social icons */}
+            <div className="flex gap-2">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  style={{
+                    background: 'rgba(22,146,161,0.08)',
+                    color: '#1692a1',
+                    border: '1px solid rgba(22,146,161,0.2)',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#1692a1';
+                    e.currentTarget.style.color = 'white';
+                    e.currentTarget.style.borderColor = '#1692a1';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = 'rgba(22,146,161,0.08)';
+                    e.currentTarget.style.color = '#1692a1';
+                    e.currentTarget.style.borderColor = 'rgba(22,146,161,0.2)';
+                  }}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+
+            {/* Divider */}
+            <div className="w-[1px] h-8 hidden lg:block" style={{ background: 'rgba(0,0,0,0.1)' }} />
+
+            {/* Download CV button */}
+            <a
+              href="https://drive.google.com/file/d/1Lk-tpj-E8KljqWgRScaEPxDykjNPx8zO/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.03]"
+              style={{
+                background: '#1692a1',
+                color: 'white',
+                boxShadow: '0 4px 20px rgba(22,146,161,0.35)',
+              }}
+            >
+              <DownloadIcon fontSize="small" />
+              Resume
+            </a>
+          </div>
+
+        </div>
       </div>
-      
-      {/* <div className="absolute w-full left-0 bottom-0 z-10">
-      <WaveHaikei/>
-      </div> */}
+
     </div>
   )
 }

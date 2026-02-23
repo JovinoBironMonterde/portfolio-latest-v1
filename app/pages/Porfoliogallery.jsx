@@ -1,298 +1,336 @@
+// C:\xampp\htdocs\portfolio\app\pages\Porfoliogallery.jsx
 'use client';
 
 import { useState, useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import InfoIcon from '@mui/icons-material/Info';
+import { ChevronLeft, ChevronRight, ArrowLeft, ExternalLink, X } from 'lucide-react';
 import { projectsData } from '../components/ProjectData';
 import Tooltip from '@mui/material/Tooltip';
 
 export default function Porfoliogallery() {
-  /* -------------------------------------------------------------------------- */
-  /*                                    STATE                                   */
-  /* -------------------------------------------------------------------------- */
 
-  const [selectedIndex, setSelectedIndex] = useState(null); // null = gallery view
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const [childImageIndex, setChildImageIndex] = useState(0);
-
   const topRef = useRef(null);
-
-  const navItems = [
-    { name: 'Projects', path: '#projects' },
-  ];
-
-  /* -------------------------------------------------------------------------- */
-  /*                                  HANDLERS                                  */
-  /* -------------------------------------------------------------------------- */
 
   const handleSelectProject = (index) => {
     setSelectedIndex(index);
     setChildImageIndex(0);
-    topRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  const handleClosePreview = () => {
-    setSelectedIndex(null);
-  };
+  const handleClosePreview = () => setSelectedIndex(null);
 
   const goToChildPrevious = () => {
-    const childrenLength =
-      projectsData[selectedIndex].children.length;
-
-    setChildImageIndex((prev) =>
-      prev === 0 ? childrenLength - 1 : prev - 1
-    );
+    const len = projectsData[selectedIndex].children.length;
+    setChildImageIndex((prev) => (prev === 0 ? len - 1 : prev - 1));
   };
 
   const goToChildNext = () => {
-    const childrenLength =
-      projectsData[selectedIndex].children.length;
-
-    setChildImageIndex((prev) =>
-      prev === childrenLength - 1 ? 0 : prev + 1
-    );
+    const len = projectsData[selectedIndex].children.length;
+    setChildImageIndex((prev) => (prev === len - 1 ? 0 : prev + 1));
   };
 
-  /* -------------------------------------------------------------------------- */
-  /*                                PREVIEW VIEW                                */
-  /* -------------------------------------------------------------------------- */
-
+  /* ── PREVIEW VIEW ── */
   if (selectedIndex !== null) {
     const currentProject = projectsData[selectedIndex];
     const currentChildren = currentProject.children;
 
     return (
-      <div className="h-auto py-[30px] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900  px-4">
-        <div className="mx-auto">
-          <div hidden className="w-full max-w-[1600px] text-center xl:hidden mx-auto text-white mb-10">
-            <h1 className="text-2xl font-semibold my-4">{currentProject.title}</h1>
-          </div>
-          
-          {/* Header */}
-          <div className="w-full max-w-[1600px] flex items-center justify-between mx-auto text-white mb-3">
-            <button
-              onClick={handleClosePreview}
-              className="text-white rounded hover:text-blue-600 transition z-20"
+      <div ref={topRef} className="min-h-screen w-full" style={{ background: '#0d1117' }}>
+
+        {/* Top bar */}
+        <div
+          className="sticky top-0 z-50 w-full flex items-center justify-between px-6 lg:px-12 py-4"
+          style={{
+            background: 'rgba(13,17,23,0.9)',
+            backdropFilter: 'blur(12px)',
+            borderBottom: '1px solid rgba(22,146,161,0.15)',
+          }}
+        >
+          <button
+            onClick={handleClosePreview}
+            className="flex items-center gap-2 text-sm font-semibold transition-colors duration-200 group"
+            style={{ color: 'rgba(255,255,255,0.6)' }}
+            onMouseEnter={e => e.currentTarget.style.color = '#1692a1'}
+            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+          >
+            <ArrowLeft size={16} className="group-hover:-translate-x-0.5 transition-transform duration-200" />
+            Back to Gallery
+          </button>
+
+          <h1 className="hidden lg:block text-white font-bold text-lg tracking-tight">
+            {currentProject.title}
+          </h1>
+
+          {currentProject.linkViewPage ? (
+            <a
+              href={currentProject.linkViewPage}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200"
+              style={{
+                background: 'rgba(22,146,161,0.12)',
+                color: '#1692a1',
+                border: '1px solid rgba(22,146,161,0.25)',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#1692a1'; e.currentTarget.style.color = 'white'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(22,146,161,0.12)'; e.currentTarget.style.color = '#1692a1'; }}
             >
-              Back to Gallery
-            </button>
-            <h1 className="text-base sm:text-lg md:text-[40px] font-semibold hidden xl:block my-4">{currentProject.title}</h1>
-            {currentProject.linkViewPage && (
-              <a
-                href={currentProject.linkViewPage}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white rounded hover:text-blue-600 transition z-20"
+              <ExternalLink size={14} />
+              View Live
+            </a>
+          ) : <div className="w-24" />}
+        </div>
+
+        {/* Main content */}
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-12 py-8">
+
+          {/* Mobile title */}
+          <h1 className="lg:hidden text-white font-bold text-xl mb-6 text-center">{currentProject.title}</h1>
+
+          <div className="lg:flex gap-8 items-start">
+
+            {/* ── Image area ── */}
+            <div className="w-full lg:w-[65%] xl:w-[70%]">
+
+              {/* Main image */}
+              <div
+                className="relative w-full overflow-hidden rounded-2xl mb-4"
+                style={{
+                  aspectRatio: '16/10',
+                  border: '1px solid rgba(255,255,255,0.07)',
+                  boxShadow: '0 30px 80px rgba(0,0,0,0.6)',
+                }}
               >
-                View Page
-              </a>
-            )}
+                <img
+                  src={currentChildren[childImageIndex]}
+                  alt={`${currentProject.alt} - Image ${childImageIndex + 1}`}
+                  className="w-full h-full object-cover transition-opacity duration-300"
+                />
 
-        
-          </div>
+                {/* Prev / Next arrows */}
+                {currentChildren.length > 1 && (
+                  <>
+                    <button
+                      onClick={goToChildPrevious}
+                      className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
+                      style={{ background: 'rgba(0,0,0,0.55)', color: 'white', backdropFilter: 'blur(4px)' }}
+                      onMouseEnter={e => e.currentTarget.style.background = '#1692a1'}
+                      onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.55)'}
+                    >
+                      <ChevronLeft size={18} />
+                    </button>
+                    <button
+                      onClick={goToChildNext}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
+                      style={{ background: 'rgba(0,0,0,0.55)', color: 'white', backdropFilter: 'blur(4px)' }}
+                      onMouseEnter={e => e.currentTarget.style.background = '#1692a1'}
+                      onMouseLeave={e => e.currentTarget.style.background = 'rgba(0,0,0,0.55)'}
+                    >
+                      <ChevronRight size={18} />
+                    </button>
+                  </>
+                )}
 
-          {/* Main Carousel */}
-          <div ref={topRef} className="relative overflow-hidden">
-            <div className="relative mb-4 max-w-[1600px] w-full md:h-[50vh] lg:h-[50vh] xl:h-[82vh] aspect-video rounded-xl overflow-hidden mx-auto">
+                {/* Image counter badge */}
+                <div
+                  className="absolute bottom-3 left-1/2 -translate-x-1/2 text-xs font-semibold px-3 py-1 rounded-full"
+                  style={{ background: 'rgba(0,0,0,0.6)', color: 'rgba(255,255,255,0.7)', backdropFilter: 'blur(4px)' }}
+                >
+                  {childImageIndex + 1} / {currentChildren.length}
+                </div>
+              </div>
 
-              {/* Info Box */}
-              <div className="InfoWrapper hidden xl:block absolute left-0 top-0">
-                <InfoIcon className="absolute left-1 md:left-3 top-1 md:top-3  text-base md:text-xl text-white" />
+              {/* Thumbnail strip */}
+              <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                {currentChildren.map((childSrc, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setChildImageIndex(idx)}
+                    className="flex-shrink-0 w-20 h-14 lg:w-24 lg:h-16 rounded-lg overflow-hidden transition-all duration-200"
+                    style={{
+                      border: idx === childImageIndex
+                        ? '2px solid #1692a1'
+                        : '2px solid rgba(255,255,255,0.08)',
+                      opacity: idx === childImageIndex ? 1 : 0.5,
+                    }}
+                    onMouseEnter={e => { if (idx !== childImageIndex) e.currentTarget.style.opacity = '0.8'; }}
+                    onMouseLeave={e => { if (idx !== childImageIndex) e.currentTarget.style.opacity = '0.5'; }}
+                  >
+                    <img src={childSrc} alt={`Thumb ${idx + 1}`} className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            </div>
 
-                <div className="HeaderBox Header-3rem py-10 xl:py-30 px-30 xl:px-50">
-                  <div className="w-full h-auto p-20 space-y-4">
+            {/* ── Info sidebar ── */}
+            <div className="w-full lg:w-[35%] xl:w-[30%] mt-8 lg:mt-0">
+              <div
+                className="rounded-2xl p-6 lg:p-8 sticky top-24"
+                style={{
+                  background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                {/* Label */}
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-5 h-[2px] rounded-full bg-[#1692a1]" />
+                  <span className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#1692a1]">Project Info</span>
+                </div>
 
-                    {/* Project Info */}
-                    <div className="w-full max-w-[600px] text-white">
-                      <span className='text-sm xl:text-3xl'>{currentProject.title}</span>
-                      <p>{currentProject.description}</p>
-                    </div>
+                {/* Title */}
+                <h2 className="text-white font-black text-xl lg:text-2xl mb-3 leading-tight" style={{ letterSpacing: '-0.02em' }}>
+                  {currentProject.title}
+                </h2>
 
-                    {/* Tech Stack */}
-                    <div className="w-full h-auto mt-0 flex items-center gap-4">
-                      {currentProject.tech?.map((item, idx) => (
-                        <Tooltip
-                          key={idx}               // ✅ key moved here
-                          title={item.title}
-                          placement="top"
-                        >
-                          <div className="w-auto flex items-center gap-2 bg-sky-950   text-white text-xs p-3 rounded-full">
-                            <img
-                              src={item.ImgLogo}
-                              alt={item.title}
-                              className="w-6 h-6 object-contain"
-                            />
-                            {/* <span>{item.title}</span> */}
+                {/* Divider */}
+                <div className="w-10 h-[2px] rounded-full mb-5" style={{ background: 'linear-gradient(90deg, #1692a1, transparent)' }} />
+
+                {/* Description */}
+                <p className="text-sm leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                  {currentProject.description}
+                </p>
+
+                {/* Tech stack */}
+                {currentProject.tech?.length > 0 && (
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest font-semibold mb-4" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                      Tech Stack
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {currentProject.tech.map((item, idx) => (
+                        <Tooltip key={idx} title={item.title} placement="top">
+                          <div
+                            className="flex items-center gap-2 px-3 py-2 rounded-lg cursor-default transition-all duration-200"
+                            style={{
+                              background: 'rgba(22,146,161,0.10)',
+                              border: '1px solid rgba(22,146,161,0.2)',
+                            }}
+                          >
+                            <img src={item.ImgLogo} alt={item.title} className="w-5 h-5 object-contain" />
+                            <span className="text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                              {item.title}
+                            </span>
                           </div>
                         </Tooltip>
                       ))}
                     </div>
                   </div>
-                </div>
-              </div>
+                )}
 
-              {/* Main Image */}
-              <img
-                src={currentChildren[childImageIndex]}
-                alt={`${currentProject.alt} - Image ${childImageIndex + 1}`}
-                className="w-full h-full object-cover"
-              />
-
-              {/* Child Carousel for Desktop */}
-              <div className="absolute left-1/2 -translate-x-1/2 hidden xl:block bottom-4 md:left-auto md:translate-x-0 md:right-4">
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={goToChildPrevious}
-                    className="text-white hover:text-gray-300 transition-colors"
+                {/* CTA */}
+                {currentProject.linkViewPage && (
+                  <a
+                    href={currentProject.linkViewPage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold transition-all duration-200"
+                    style={{
+                      background: '#1692a1',
+                      color: 'white',
+                      boxShadow: '0 6px 24px rgba(22,146,161,0.3)',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 32px rgba(22,146,161,0.5)'}
+                    onMouseLeave={e => e.currentTarget.style.boxShadow = '0 6px 24px rgba(22,146,161,0.3)'}
                   >
-                    <ChevronLeft size={20} />
-                  </button>
-
-                  <div className="flex gap-2 overflow-hidden">
-                    {currentChildren.map((childSrc, idx) => (
-                      <div
-                        key={idx}
-                        onClick={() => setChildImageIndex(idx)}
-                        className={`w-12 sm:w-18 md:w-20 lg:w-28 xl:w-45
-                          h-14 sm:h-20 md:h-20 lg:h-30 xl:h-30
-                          rounded-md xl:rounded-xl overflow-hidden cursor-pointer
-                          transition-all p-0.5  bg-sky-950 relative
-                          ${
-                            idx === childImageIndex
-                              ? "before:content-[''] before:absolute before:inset-0 before:border-2 before:border-[#1692a1] before:rounded-xl"
-                              : "bg-sky-100 hover:opacity-75"
-                          }`}
-                      >
-                        <div className="w-full h-full overflow-hidden rounded-md xl:rounded-xl">
-                        <img
-                          src={childSrc}
-                          alt={`Child ${idx + 1}`}
-                          className="w-full h-full object-cover rounded-md xl:rounded-xl hover:scale-105 transition-all"
-                        />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={goToChildNext}
-                    className="text-white hover:text-gray-300 transition-colors"
-                  >
-                    <ChevronRight size={20} />
-                  </button>
-
-                </div>
-              </div>
-
-              {/* Child Carousel for Mobile */}
-      
-
-            </div>
-            <div className="w-full block xl:hidden">
-              <div className="flex items-center justify-evenly mb-5 gap-2">
-
-                <div className="flex gap-1 overflow-hidden">
-                  {currentChildren.map((childSrc, idx) => (
-                    <div
-                      key={idx}
-                      onClick={() => setChildImageIndex(idx)}
-                      className={`w-55
-                        h-14 sm:h-20 md:h-20 lg:h-30 xl:h-30
-                        rounded-md xl:rounded-2xl overflow-hidden cursor-pointer
-                        transition-all p-0.5 xl:p-1 bg-sky-950
-                        ${
-                          idx === childImageIndex
-                            ? 'opacity-100'
-                            : 'opacity-40 hover:opacity-75'
-                        }`}
-                    >
-                      <img
-                        src={childSrc}
-                        alt={`Child ${idx + 1}`}
-                        className="w-full h-full object-cover rounded-md xl:rounded-2xl"
-                      />
-                    </div>
-                  ))}
-                </div>
-
-              </div>
-              <div className="w-full h-auto p-2 ">
-                {/* Project Info */}
-                <div className="w-full text-center text-white">
-                  <h1 className='text-2xl mb-5'>{currentProject.title}</h1>
-                  <p className='mb-3'>{currentProject.description}</p>
-                </div>
-
-                {/* Tech Stack */}
-                <div className="w-full mt-0 h-auto flex items-center justify-center gap-4">
-                  {currentProject.tech?.map((item, idx) => (
-                    <Tooltip
-                      key={idx}  
-                      title={item.title}
-                      placement="top"
-                    >
-                      <div className="w-auto flex items-center mt-0 gap-2 bg-sky-950 text-white text-xs p-3 rounded-full">
-                        <img
-                          src={item.ImgLogo}
-                          alt={item.title}
-                          className="w-6 h-6 object-contain"
-                        />
-                      </div>
-                    </Tooltip>
-                  ))}
-                </div>
+                    <ExternalLink size={15} />
+                    Visit Live Project
+                  </a>
+                )}
               </div>
             </div>
+
           </div>
         </div>
       </div>
     );
   }
 
-  /* -------------------------------------------------------------------------- */
-  /*                                GALLERY VIEW                                */
-  /* -------------------------------------------------------------------------- */
-
+  /* ── GALLERY VIEW ── */
   return (
-    <div className="h-auto p-3 md:p-10 xl:p-20 bg-gradient-to-br from-slate-900 flex items-center via-slate-800 to-slate-900 justify-center">
-      
-      {navItems.map((item) => (
-        <li key={item.name} className="cursor-pointer text-white justify-center text-center" style={{listStyle: 'none'}}>
-          <a href={item.path}>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center text-center gap-4 h-auto">
+    <div className="min-h-screen w-full px-4 md:px-10 xl:px-20 py-16" style={{ background: '#0d1117' }}>
 
-              {projectsData.map((project, idx) => (
-                <div
-                  key={project.id}
-                  className="group relative overflow-hidden rounded-lg cursor-pointer min-h-[150px] lg:min-h-[300px] xl:min-h-[300px]"
-                  onClick={() => handleSelectProject(idx)}
-                >
-                  <img
-                    src={project.src}
-                    alt={project.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
+      {/* Gallery header */}
+      <div className="text-center mb-14">
+        <span className="inline-block text-xs font-semibold tracking-[0.3em] uppercase text-[#1692a1] mb-3">
+          My Work
+        </span>
+        <h2
+          className="font-black text-white leading-tight"
+          style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.02em' }}
+        >
+          Project Gallery
+        </h2>
+        <div className="mt-4 mx-auto w-14 h-[3px] rounded-full bg-[#1692a1]" />
+        <p className="mt-5 text-sm max-w-md mx-auto" style={{ color: 'rgba(255,255,255,0.4)' }}>
+          Click on any project to explore screenshots, tech stack, and details.
+        </p>
+      </div>
 
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold text-center px-4">
-                      {project.title}
-                    </h3>
-                  </div>
+      {/* Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-[1400px] mx-auto">
+        {projectsData.map((project, idx) => (
+          <div
+            key={project.id}
+            onClick={() => handleSelectProject(idx)}
+            className="group relative overflow-hidden rounded-2xl cursor-pointer"
+            style={{
+              aspectRatio: '4/3',
+              border: '1px solid rgba(255,255,255,0.06)',
+              boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
+            }}
+          >
+            {/* Project image */}
+            <img
+              src={project.src}
+              alt={project.alt}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
 
-                  {/* Image Count */}
-                  <div className="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
-                    {project.children.length}
-                  </div>
-                </div>
-              ))}
+            {/* Overlay */}
+            <div
+              className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+              style={{ background: 'rgba(13,17,23,0.82)', backdropFilter: 'blur(2px)' }}
+            >
+              {/* Teal accent line */}
+              <div className="w-8 h-[2px] rounded-full bg-[#1692a1] mb-3 translate-y-2 group-hover:translate-y-0 transition-transform duration-300" />
 
+              <h3 className="text-white text-sm sm:text-base font-bold text-center px-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                {project.title}
+              </h3>
+
+              <p className="text-[10px] mt-2 font-semibold tracking-widest uppercase translate-y-2 group-hover:translate-y-0 transition-transform duration-300 delay-100"
+                style={{ color: '#1692a1' }}>
+                View Project
+              </p>
             </div>
-          </a>
-        </li>
-      ))}
+
+            {/* Image count badge */}
+            <div
+              className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full"
+              style={{
+                background: 'rgba(13,17,23,0.75)',
+                color: 'rgba(255,255,255,0.6)',
+                backdropFilter: 'blur(4px)',
+                border: '1px solid rgba(255,255,255,0.08)',
+              }}
+            >
+              {project.children.length} {project.children.length === 1 ? 'img' : 'imgs'}
+            </div>
+
+            {/* Bottom gradient for title peek */}
+            <div
+              className="absolute bottom-0 left-0 right-0 h-16 group-hover:opacity-0 transition-opacity duration-300"
+              style={{ background: 'linear-gradient(transparent, rgba(13,17,23,0.85))' }}
+            />
+            <p className="absolute bottom-3 left-0 right-0 text-center text-xs font-semibold text-white px-3 group-hover:opacity-0 transition-opacity duration-300 truncate">
+              {project.title}
+            </p>
+          </div>
+        ))}
+      </div>
+
     </div>
   );
 }
