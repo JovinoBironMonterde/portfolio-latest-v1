@@ -58,11 +58,11 @@ function Navbar() {
   }, []);
 
   const drawer = (
-    <Box sx={{ textAlign: "center", paddingTop: 2 }}>
+    <Box sx={{ textAlign: "center", paddingTop: 2, bgcolor: "#f4f4f4", height: "100vh" }}>
       <Box sx={{ my: 2, display: "flex", justifyContent: "center" }}>
-        <Image src={Imagelogo} width={150} height={100} alt="Logo" />
+        <Image src={Imagelogo} width={200} height={100} alt="Logo" />
       </Box>
-
+        <hr />
       <List>
         {navItems.map((item) => {
           const sectionId = item.path.replace("#", "");
@@ -104,7 +104,7 @@ function Navbar() {
       >
         <Toolbar className="flex justify-between">
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Image src={Imagelogo} width={130} height={80} alt="Logo" />
+            <Image src={Imagelogo} width={190} height={40} alt="Logo" />
           </Box>
 
           {/* Desktop Menu */}
@@ -153,6 +153,7 @@ function Navbar() {
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             width: 240,
+            height: "100vh",
           },
         }}
       >
