@@ -66,7 +66,7 @@ const settings2 = {
 };
 
 return (
-<div className="w-full h-full">
+<div className="w-full h-full ">
   <Slider {...settings}>
     {projectsData.map((project, index) => (
       <div key={project.id} className={`Content-${index + 1} w-full lg:px-20 md:px-10 px-2 h-full `}>

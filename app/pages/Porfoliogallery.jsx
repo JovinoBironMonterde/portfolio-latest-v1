@@ -252,7 +252,7 @@ export default function Porfoliogallery() {
     <div className="min-h-screen w-full px-4 md:px-10 xl:px-20 py-16" style={{ background: '#0d1117' }}>
 
       {/* Gallery header */}
-      <div className="text-center mb-14">
+      <div className="text-center mb-14 pt-20">
         <span className="inline-block text-xs font-semibold tracking-[0.3em] uppercase text-[#1692a1] mb-3">
           My Work
         </span>
