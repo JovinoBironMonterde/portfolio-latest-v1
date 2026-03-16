@@ -64,6 +64,12 @@ const sedney3 = "/assets/img/sydney/sedney3.png";
 const sedney4 = "/assets/img/sydney/sedney4.png";
 const sedney5 = "/assets/img/sydney/sedney5.png";
 
+const pethaven1 = "/assets/img/pethaven/image1.png";
+const pethaven2 = "/assets/img/pethaven/image2.png";
+const pethaven3 = "/assets/img/pethaven/image3.png";
+const pethaven4 = "/assets/img/pethaven/image4.png";
+
+
 
 
 export const projectsData = [
@@ -153,23 +159,41 @@ export const projectsData = [
       { ImgLogo: JavaScript, title: "JAVASCRIPT", percentage: "80.6%" },
     ],
   },
-{ 
-  id: 6, 
-  title: 'Sydney Health-Themed',       
-  description: `This is a frontend-only practice website built using Next.js and Tailwind CSS. The project showcases a modern, fully responsive homepage inspired by a Sydney-based health and research organization in Sydney, Australia.
-                The main objective of this project is to practice advanced layout structuring, reusable component development, and responsive UI design using a clean and professional design system.`,
-  details: `Key features include a hero carousel, news and events section, resource cards, impact highlight section, partner logos grid, and a structured multi-column footer. 
-            The project focuses purely on frontend implementation with reusable components and responsive layouts. No backend integration or API connectivity is included.`,
-  Status: 'In Progress',
-  src: sedney1, 
-  alt: 'Sydney practice website homepage preview',
-  children: [sedney2, sedney3, sedney4, sedney5, sedney1],
-  linkViewPage: "https://nextjs-practice-page-eight.vercel.app/",
-  linkViewCode: "",
-  tech: [
-    { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
-    { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
-  ],
-}
+  { 
+    id: 6, 
+    title: 'Sydney Health-Themed',       
+    description: `This is a frontend-only practice website built using Next.js and Tailwind CSS. The project showcases a modern, fully responsive homepage inspired by a Sydney-based health and research organization in Sydney, Australia.
+                  The main objective of this project is to practice advanced layout structuring, reusable component development, and responsive UI design using a clean and professional design system.`,
+    details: `Key features include a hero carousel, news and events section, resource cards, impact highlight section, partner logos grid, and a structured multi-column footer. 
+              The project focuses purely on frontend implementation with reusable components and responsive layouts. No backend integration or API connectivity is included.`,
+    Status: 'In Progress',
+    src: sedney1, 
+    alt: 'Sydney practice website homepage preview',
+    children: [sedney2, sedney3, sedney4, sedney5, sedney1],
+    linkViewPage: "https://nextjs-practice-page-eight.vercel.app/",
+    linkViewCode: "",
+    tech: [
+      { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
+      { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
+    ],
+  },
+
+  { 
+    id: 7, 
+    title: 'PetHaven – Pet Adoption Demo Website',       
+    description: `PetHaven is a demo landing page concept for a pet adoption and pet services platform. The design demonstrates how a modern pet marketplace website can present pets available for adoption, categories of animals, and additional services such as grooming, veterinary care, and training. The interface focuses on clean layout, friendly visuals, and easy navigation to help users quickly find their ideal companion. This project is intended for UI/UX demonstration and portfolio purposes only and does not represent a real or functional adoption platform.`,
+    details: `Key features include a hero carousel, news and events section, resource cards, impact highlight section, partner logos grid, and a structured multi-column footer. 
+              The project focuses purely on frontend implementation with reusable components and responsive layouts. No backend integration or API connectivity is included.`,
+    Status: 'In Progress',
+    src: pethaven1, 
+    alt: 'Sydney practice website homepage preview',
+    children: [pethaven2, pethaven3, pethaven4, pethaven1],
+    linkViewPage: "https://primetech-pethaven-demo.vercel.app/",
+    linkViewCode: "",
+    tech: [
+      { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
+      { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
+    ],
+  }
 
 ];

@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 // import AboutImage from '../../public/assets/img/6.png';
-import AboutImage from '../../public/assets/img/sdsdsd.png';
+import AboutImage from '../../public/assets/img/imagev2.png';
 import RevealAnimation from '../components/RevealAnimation';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -30,11 +30,11 @@ const highlights = [
 
 function Aboutpage() {
   return (
-    <div className='relative w-full max-w-[1300px] mx-auto rounded-3xl overflow-hidden lg:flex md:flex items-stretch'>
-
+    <div className='relative w-full max-w-[1300px] mx-auto rounded-3xl overflow-hidden lg:flex md:flex items-stretch reveal fade-bottom'>
+      
       {/* ── Left: Image Panel ── */}
       <div
-        className="relative image-profile-image w-full lg:w-[45%] flex justify-center items-end overflow-hidden reveal"
+        className="relative image-profile-image w-full lg:w-[45%] flex justify-center items-end overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #0e2a2d 0%, #0d1117 60%, #0a2428 100%)', minHeight: '480px' }}
       >
         {/* Decorative teal circle behind image */}
@@ -55,11 +55,10 @@ function Aboutpage() {
         {/* Profile image */}
         <div className="relative z-10 px-8 pt-10 pb-0">
           <Image
-            className='z-10 drop-shadow-2xl'
+            className='z-10 h-auto drop-shadow-2xl -mb-32'
             src={AboutImage}
             alt="Jovino Monterde"
             width={210}
-            height={210}
             style={{ objectFit: 'contain' }}
           />
         </div>
@@ -81,7 +80,7 @@ function Aboutpage() {
 
       {/* ── Right: Content Panel ── */}
       <div
-        className="profile-image w-full lg:w-[55%] flex items-center z-10 reveal fade-bottom"
+        className="profile-image w-full lg:w-[55%] flex items-center z-10"
         style={{ background: 'linear-gradient(135deg, #f8fafb 0%, #eef2f5 100%)' }}
       >
         <div className="w-full h-auto px-8 lg:px-14 py-14">
