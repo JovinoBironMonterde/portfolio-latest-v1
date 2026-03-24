@@ -23,7 +23,7 @@ const socialLinks = [
 ];
 
 const highlights = [
-  { value: '2+', label: 'Years Experience' },
+  { value: '3+', label: 'Years Experience' },
   { value: '10+', label: 'Projects Built' },
   { value: '5+', label: 'Technologies' },
 ];
@@ -114,7 +114,7 @@ function Aboutpage() {
           <div className="space-y-4 mb-10">
             <p className="text-sm leading-relaxed" style={{ color: 'rgba(0,0,0,0.65)' }}>
               I'm a <strong className="font-semibold text-[#0d1117]">front-end developer</strong> with over
-              2 years of experience creating responsive and user-friendly web applications. I enjoy turning
+              3 years of experience creating responsive and user-friendly web applications. I enjoy turning
               designs into functional, pixel-perfect websites and have worked on a variety of projects —
               from single-page apps to full e-commerce platforms.
             </p>

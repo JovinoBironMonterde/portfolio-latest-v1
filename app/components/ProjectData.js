@@ -69,6 +69,11 @@ const pethaven2 = "/assets/img/pethaven/image2.png";
 const pethaven3 = "/assets/img/pethaven/image3.png";
 const pethaven4 = "/assets/img/pethaven/image4.png";
 
+const primetech1 = "/assets/img/prime_tech/image1.png";
+const primetech2 = "/assets/img/prime_tech/image2.png";
+const primetech3 = "/assets/img/prime_tech/image3.png";
+const primetech4 = "/assets/img/prime_tech/image4.png";
+
 
 
 
@@ -189,6 +194,27 @@ export const projectsData = [
     alt: 'Sydney practice website homepage preview',
     children: [pethaven2, pethaven3, pethaven4, pethaven1],
     linkViewPage: "https://primetech-pethaven-demo.vercel.app/",
+    linkViewCode: "",
+    tech: [
+      { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
+      { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
+    ],
+  },
+  { 
+    id: 8, 
+    title: 'PrimeTech Demo Website',       
+    description: `PrimeTech is a conceptual landing page built with Next.js and styled using Tailwind CSS, demonstrating component-based architecture, optimized rendering, and mobile-first design principles. The project emphasizes performance, scalability, and clean, maintainable code.`,
+    details: `
+        This project was created as a demo concept to showcase a modern, conversion-focused landing page for a web development agency. The goal was to design a clean and professional interface that clearly communicates services while maintaining strong visual hierarchy and usability.
+        Built with Next.js, the application leverages optimized rendering and fast page performance, ensuring a smooth user experience across devices. Tailwind CSS was used to implement a mobile-first, responsive layout with consistent spacing, typography, and reusable UI components.
+        Key features include a structured hero section, service highlights, call-to-action elements, and intuitive navigation, all designed to guide users toward engagement. The layout prioritizes readability and accessibility while maintaining a sleek, modern aesthetic.
+        This project demonstrates my ability to build scalable frontend architectures, apply modern UI/UX principles, and develop high-performance web interfaces using industry-standard tools.
+        `,
+    Status: 'In Progress',
+    src:primetech1, 
+    alt: 'Sydney practice website homepage preview',
+    children: [primetech2,primetech3,primetech4,primetech1],
+    linkViewPage: "https://primetech-solution.vercel.app/",
     linkViewCode: "",
     tech: [
       { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },

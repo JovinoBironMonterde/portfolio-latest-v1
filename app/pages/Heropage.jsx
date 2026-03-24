@@ -163,7 +163,7 @@ function Heropage() {
             {[
               { value: '2+', label: 'Years Experience' },
               { value: '10+', label: 'Projects Done' },
-              { value: '100%', label: 'Client Satisfaction' },
+              { value: '5+', label: 'Technologies' },
             ].map((stat, i) => (
               <div key={i} className="text-left">
                 <p
@@ -237,9 +237,9 @@ function Heropage() {
           {/* Mobile stats */}
           <div className="flex justify-center gap-8 mt-10">
             {[
-              { value: '2+', label: 'Years' },
+              { value: '3+', label: 'Years' },
               { value: '10+', label: 'Projects' },
-              { value: '100%', label: 'Satisfaction' },
+              { value: '100%', label: 'Technologies' },
             ].map((stat, i) => (
               <div key={i}>
                 <p className="text-xl font-black text-[#1692a1]">{stat.value}</p>
