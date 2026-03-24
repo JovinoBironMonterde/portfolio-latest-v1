@@ -161,7 +161,7 @@ function Heropage() {
           {/* Stats row */}
           <div className="flex gap-10 mt-14">
             {[
-              { value: '2+', label: 'Years Experience' },
+              { value: '3+', label: 'Years Experience' },
               { value: '10+', label: 'Projects Done' },
               { value: '5+', label: 'Technologies' },
             ].map((stat, i) => (
