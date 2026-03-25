@@ -69,10 +69,10 @@ const pethaven2 = "/assets/img/pethaven/image2.png";
 const pethaven3 = "/assets/img/pethaven/image3.png";
 const pethaven4 = "/assets/img/pethaven/image4.png";
 
-const primetech1 = "/assets/img/prime_tech/image1.png";
-const primetech2 = "/assets/img/prime_tech/image2.png";
-const primetech3 = "/assets/img/prime_tech/image3.png";
-const primetech4 = "/assets/img/prime_tech/image4.png";
+const primetech1 = "/assets/img/prime_tech/primetech1.png";
+const primetech2 = "/assets/img/prime_tech/primetech2.png";
+const primetech3 = "/assets/img/prime_tech/primetech3.png";
+const primetech4 = "/assets/img/prime_tech/primetech4.png";
 
 
 
