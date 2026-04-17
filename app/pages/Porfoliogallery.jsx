@@ -307,8 +307,7 @@ export default function Porfoliogallery() {
             </div>
 
             {/* Image count badge */}
-            <div
-              className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full"
+            <div hidden className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full"
               style={{
                 background: 'rgba(13,17,23,0.75)',
                 color: 'rgba(255,255,255,0.6)',
