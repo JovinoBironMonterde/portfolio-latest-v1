@@ -69,10 +69,10 @@ const pethaven2 = "/assets/img/pethaven/image2.png";
 const pethaven3 = "/assets/img/pethaven/image3.png";
 const pethaven4 = "/assets/img/pethaven/image4.png";
 
-const primetech1 = "/assets/img/prime_tech/primetech1.png";
-const primetech2 = "/assets/img/prime_tech/primetech2.png";
-const primetech3 = "/assets/img/prime_tech/primetech3.png";
-const primetech4 = "/assets/img/prime_tech/primetech4.png";
+const primetech1 = "/assets/img/primetech/primetect1.png";
+const primetech2 = "/assets/img/primetech/primetech2.png";
+const primetech3 = "/assets/img/primetech/primetech3.png";
+const primetech4 = "/assets/img/primetech/primetech4.png";
 
 
 
@@ -211,9 +211,9 @@ export const projectsData = [
         This project demonstrates my ability to build scalable frontend architectures, apply modern UI/UX principles, and develop high-performance web interfaces using industry-standard tools.
         `,
     Status: 'In Progress',
-    src:primetech1, 
-    alt: 'Sydney practice website homepage preview',
-    children: [primetech2,primetech3,primetech4,primetech1],
+    src: primetech1, 
+    alt: 'PrimeTech Demo Website website homepage preview',
+    children: [primetech2, primetech3, primetech4, primetech1],
     linkViewPage: "https://primetech-solution.vercel.app/",
     linkViewCode: "",
     tech: [
