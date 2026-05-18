@@ -5,6 +5,7 @@ import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowLeft, ExternalLink, X } from 'lucide-react';
 import { projectsData } from '../components/ProjectData';
 import Tooltip from '@mui/material/Tooltip';
+import Link from 'next/link';
 
 export default function Porfoliogallery() {
 
@@ -269,7 +270,7 @@ export default function Porfoliogallery() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-[1400px] mx-auto">
+     <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 max-w-[1400px] mx-auto justify-center">
         {projectsData.map((project, idx) => (
           <div
             key={project.id}
@@ -329,7 +330,9 @@ export default function Porfoliogallery() {
           </div>
         ))}
       </div>
-
+      <Link href="https://projects-o9l1wq1gj-jovinobironmonterdes-projects.vercel.app/">
+        <button>View More Projects</button>
+      </Link>
     </div>
   );
 }

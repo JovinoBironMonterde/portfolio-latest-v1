@@ -15,9 +15,6 @@ export default function Home() {
     <>
       <RevealAnimation />
       <div className="main-wrapper">
-        <div className="navbar-wrapper sticky top-0 left-0 w-full h-full">
-          <Navbar />
-        </div>
 
         <main className="w-full h-full">
           <section id="hero" className="hero-wrapper w-full h-auto pt-[90px] bg-slate-50">
@@ -39,7 +36,6 @@ export default function Home() {
           <section id="contact" className="bg-slate-50">
             <Contactpage />
           </section>
-
           <Footer />
         </main>
       </div>

@@ -27,6 +27,7 @@ const Mysql  = "/assets/logo/MySQL.png";
 const kylin1 = "/assets/img/kylin/kylin1.png";
 const kylin2 = "/assets/img/kylin/kylin2.png";
 const kylin3 = "/assets/img/kylin/kylin3.png";
+const kylinFrame = "/assets/img/kylin/kylinFrame.png";
 
 const mimnu1 = "/assets/img/mimnu/mimnu1.png";
 const mimnu2 = "/assets/img/mimnu/mimnu2.png";
@@ -57,6 +58,8 @@ const pspace2 = "/assets/img/pspace/pspace2.png";
 const pspace3 = "/assets/img/pspace/pspace3.png";
 const pspace4 = "/assets/img/pspace/pspace4.png";
 const pspace5 = "/assets/img/pspace/pspace5.png";
+const pspaceFrame = "/assets/img/pspace/pspaceFrame.png";
+
 
 const sedney1 = "/assets/img/sydney/sedney1.png";
 const sedney2 = "/assets/img/sydney/sedney2.png";
@@ -68,12 +71,20 @@ const pethaven1 = "/assets/img/pethaven/image1.png";
 const pethaven2 = "/assets/img/pethaven/image2.png";
 const pethaven3 = "/assets/img/pethaven/image3.png";
 const pethaven4 = "/assets/img/pethaven/image4.png";
+const PethavenFrame = "/assets/img/pethaven/PethavenFrame.png";
 
-const primetech1 = "/assets/img/primetech/primetect1.png";
+const primetech1 = "/assets/img/primetech/primetech1.png";
 const primetech2 = "/assets/img/primetech/primetech2.png";
 const primetech3 = "/assets/img/primetech/primetech3.png";
 const primetech4 = "/assets/img/primetech/primetech4.png";
+const primetechFrame = "/assets/img/primetech/primetechFrame.png";
 
+const lendflow1 = "/assets/img/lendflow/lendflow1.png";
+const lendflow2 = "/assets/img/lendflow/lendflow2.png";
+const lendflow3 = "/assets/img/lendflow/lendflow3.png";
+const lendflow4 = "/assets/img/lendflow/lendflow4.png";
+const lendflow5 = "/assets/img/lendflow/lendflow5.png";
+const lendflowFrame = "/assets/img/lendflow/lendflowFrame.png";
 
 
 
@@ -83,7 +94,7 @@ export const projectsData = [
     title: 'Kylin Project',       
     description: 'This frontend-only loan platform, built with HTML, CSS, Bootstrap, and JavaScript, offers a secure and user-friendly UI for collateral-based loans. It features an easy application process, competitive rates, and a responsive design. While it lacks backend functionality, it provides an interactive and visually appealing experience for loan applications.', 
     details: 'Additional details',  
-    src: [kylin1], 
+    src: [kylinFrame], 
     alt: 'Mountain landscape',
     children:  [kylin1, kylin2, kylin3],
     linkViewPage: "https://jovinobironmonterde.github.io/kylin_sample_project/",
@@ -151,7 +162,7 @@ export const projectsData = [
     title: 'Pspace App',       
     description: 'Built the PSpace application from scratch as a Frontend Developer. Implemented UI and dynamic data rendering using JavaScript and Jinja by consuming backend APIs. Collaborated closely with designers and backend developers.', 
     details: 'Additional details',  
-    src: pspace1, 
+    src: pspaceFrame, 
     alt: 'Wildflowers',
     children:  [pspace2, pspace3, pspace4, pspace5, pspace1],
     linkViewPage: "https://pspace.app/",
@@ -190,9 +201,9 @@ export const projectsData = [
     details: `Key features include a hero carousel, news and events section, resource cards, impact highlight section, partner logos grid, and a structured multi-column footer. 
               The project focuses purely on frontend implementation with reusable components and responsive layouts. No backend integration or API connectivity is included.`,
     Status: 'In Progress',
-    src: pethaven1, 
+    src: PethavenFrame, 
     alt: 'Sydney practice website homepage preview',
-    children: [pethaven2, pethaven3, pethaven4, pethaven1],
+    children: [PethavenFrame, pethaven2, pethaven3, pethaven4, pethaven1],
     linkViewPage: "https://primetech-pethaven-demo.vercel.app/",
     linkViewCode: "",
     tech: [
@@ -211,11 +222,36 @@ export const projectsData = [
         This project demonstrates my ability to build scalable frontend architectures, apply modern UI/UX principles, and develop high-performance web interfaces using industry-standard tools.
         `,
     Status: 'In Progress',
-    src: primetech1, 
+    src: primetechFrame, 
     alt: 'PrimeTech Demo Website website homepage preview',
-    children: [primetech2, primetech3, primetech4, primetech1],
+    children: [primetechFrame, primetech1, primetech2, primetech3, primetech4],
     linkViewPage: "https://primetech-solution.vercel.app/",
     linkViewCode: "",
+    tech: [
+      { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
+      { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
+    ],
+  },
+  { 
+    id: 9, 
+    title: 'LendFlow Loan Management UI Demo',       
+    description: `LendFlow is a modern Loan Management System UI demo built with Next.js and styled using Tailwind CSS. The project showcases a responsive fintech dashboard interface for managing loan applications, borrower records, repayments, risk monitoring, and analytics using clean component-based architecture and modern UI/UX design principles. This project is intended for frontend and UI demonstration purposes only and uses static sample data.`,
+    
+    details: `
+        LendFlow was developed as a frontend UI demo project inspired by modern financial and lending platforms. The goal of the project was to create a clean, professional, and responsive dashboard experience that simulates how loan management systems organize and visualize lending operations.
+        Built using Next.js and Tailwind CSS, the application demonstrates scalable frontend architecture, reusable components, optimized rendering, and mobile-first responsive design. The interface was designed with a focus on usability, accessibility, visual hierarchy, and modern fintech aesthetics.
+        The demo includes multiple dashboard modules such as loan application management, borrower profiles, repayment tracking, risk analysis, KPI statistics, and alert notifications. Interactive charts, status indicators, and analytics cards were implemented to provide a realistic representation of how financial data can be presented within a lending platform.
+        All information displayed throughout the application uses static sample data for demonstration purposes only. The project does not include backend integration, authentication, or real transaction processing, as its primary purpose is to showcase frontend development skills, dashboard UI design, and responsive web application structure.
+        This project highlights my ability to create modern and scalable user interfaces using industry-standard technologies while applying clean code practices and professional UI/UX principles.
+        `,
+    
+    Status: 'In Progress',
+    src: lendflowFrame, 
+    alt: 'LendFlow Loan Management UI demo dashboard preview',
+    children: [lendflowFrame, lendflow1, lendflow2, lendflow3, lendflow4, lendflow5],
+    linkViewPage: "https://lendingflow-project.vercel.app/",
+    linkViewCode: "",
+    
     tech: [
       { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
       { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
