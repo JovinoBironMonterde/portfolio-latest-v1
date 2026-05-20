@@ -1,21 +1,23 @@
 // C:\xampp\htdocs\portfolio\app\pages\Heropage.jsx
 "use client";
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import '../../public/css/HeroStyle.css';
 import Typography from '@mui/material/Typography';
 import FormComponent from '../components/formcomponent';
 import TypingLoop from '../components/TypingLoop';
 
 function Heropage() {
-  const router = useRouter();
+  // const downloadResume = () => {
+  //   const link = document.createElement('a');
+  //   link.href = '/assets/resume/JovinoMonterde-cv.pdf';
+  //   link.download = 'JovinoMonterde-cv.pdf';
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const goToResume = () => {
-    router.push("/pages/Resume");
   };
 
   return (
@@ -133,7 +135,7 @@ function Heropage() {
             </button>
 
             <button
-              onClick={goToResume}
+              onClick={downloadResume}
               className="group relative px-8 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 cursor-pointer"
               style={{
                 background: 'transparent',
@@ -226,7 +228,7 @@ function Heropage() {
               View Projects
             </button>
             <button
-              onClick={goToResume}
+              onClick={downloadResume}
               className="px-7 py-3 rounded-xl font-semibold text-sm cursor-pointer transition-all duration-300"
               style={{ background: 'transparent', color: 'white', border: '2px solid rgba(255,255,255,0.2)' }}
             >
