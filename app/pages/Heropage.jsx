@@ -1,42 +1,60 @@
 // C:\xampp\htdocs\portfolio\app\pages\Heropage.jsx
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import '../../public/css/HeroStyle.css';
 import Typography from '@mui/material/Typography';
 import FormComponent from '../components/formcomponent';
 import TypingLoop from '../components/TypingLoop';
+import Resume from '../components/Resume'; // ⬅️ adjust path if your file lives elsewhere
 
 function Heropage() {
   const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const scrollToProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const goToResume = () => {
-    router.push("/pages/Resume");
+  const ShowModal = () => {
+    setIsModalOpen(true);
   };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Close modal on Escape key + lock background scroll while open
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') closeModal();
+    };
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEsc);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
 
   return (
     <div className="relative w-full min-h-screen lg:flex items-center overflow-hidden">
 
       {/* ── Decorative Background Accents ── */}
-      {/* Large radial glow top-left */}
       <div
         className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
           background: 'radial-gradient(circle, rgba(22,146,161,0.18) 0%, transparent 70%)',
         }}
       />
-      {/* Smaller accent bottom-right */}
       <div
         className="absolute bottom-10 right-10 w-[350px] h-[350px] rounded-full pointer-events-none"
         style={{
           background: 'radial-gradient(circle, rgba(22,146,161,0.10) 0%, transparent 70%)',
         }}
       />
-      {/* Subtle grid lines overlay */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
@@ -52,7 +70,6 @@ function Heropage() {
         {/* ── DESKTOP ── */}
         <div className="details-box-desktop">
 
-          {/* Eyebrow label */}
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-[2px] rounded-full bg-[#1692a1]" />
             <span
@@ -63,7 +80,6 @@ function Heropage() {
             </span>
           </div>
 
-          {/* Greeting */}
           <p
             className="text-lg font-medium mb-1"
             style={{ color: 'rgba(255,255,255,0.55)' }}
@@ -71,7 +87,6 @@ function Heropage() {
             Hello, I'm
           </p>
 
-          {/* Name */}
           <h1
             className="font-black leading-none mb-4"
             style={{
@@ -84,7 +99,6 @@ function Heropage() {
             <span style={{ color: '#1692a1' }}>Monterde</span>
           </h1>
 
-          {/* Typing animation */}
           <div
             className="text-xl lg:text-3xl font-bold mb-8"
             style={{ color: 'rgba(255,255,255,0.75)' }}
@@ -92,13 +106,11 @@ function Heropage() {
             <TypingLoop words={['Frontend Developer', 'Freelancer']} />
           </div>
 
-          {/* Divider */}
           <div
             className="w-16 h-[3px] rounded-full mb-8"
             style={{ background: 'linear-gradient(90deg, #1692a1, transparent)' }}
           />
 
-          {/* Description */}
           <p
             className="text-base leading-relaxed mb-12"
             style={{ color: 'rgba(255,255,255,0.5)', maxWidth: '560px' }}
@@ -108,7 +120,6 @@ function Heropage() {
             integrating modern back-end technologies to create complete, efficient, and engaging solutions.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex gap-4 flex-wrap">
             <button
               onClick={scrollToProjects}
@@ -125,7 +136,6 @@ function Heropage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
-              {/* Hover overlay */}
               <span
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ background: 'rgba(255,255,255,0.12)' }}
@@ -133,7 +143,7 @@ function Heropage() {
             </button>
 
             <button
-              onClick={goToResume}
+              onClick={ShowModal}
               className="group relative px-8 py-3.5 rounded-xl font-semibold text-sm overflow-hidden transition-all duration-300 cursor-pointer"
               style={{
                 background: 'transparent',
@@ -150,7 +160,7 @@ function Heropage() {
               }}
             >
               <span className="relative z-10 flex items-center gap-2">
-                Download CV
+                View CV
                 <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
@@ -158,7 +168,6 @@ function Heropage() {
             </button>
           </div>
 
-          {/* Stats row */}
           <div className="flex gap-10 mt-14">
             {[
               { value: '3+', label: 'Years Experience' },
@@ -186,7 +195,6 @@ function Heropage() {
         {/* ── MOBILE ── */}
         <div className="details-box-mobile text-center">
 
-          {/* Eyebrow */}
           <div className="flex items-center justify-center gap-3 mb-5">
             <div className="w-6 h-[2px] rounded-full bg-[#1692a1]" />
             <span className="text-[10px] tracking-[0.3em] uppercase font-semibold text-[#1692a1]">Portfolio</span>
@@ -216,7 +224,6 @@ function Heropage() {
             I focus on delivering pixel-perfect implementations and seamlessly integrating modern back-end technologies.
           </p>
 
-          {/* Mobile buttons */}
           <div className="flex justify-center gap-3 flex-wrap">
             <button
               onClick={scrollToProjects}
@@ -226,15 +233,14 @@ function Heropage() {
               View Projects
             </button>
             <button
-              onClick={goToResume}
+              onClick={ShowModal}
               className="px-7 py-3 rounded-xl font-semibold text-sm cursor-pointer transition-all duration-300"
               style={{ background: 'transparent', color: 'white', border: '2px solid rgba(255,255,255,0.2)' }}
             >
-              Download CV
+              View CV
             </button>
           </div>
 
-          {/* Mobile stats */}
           <div className="flex justify-center gap-8 mt-10">
             {[
               { value: '3+', label: 'Years' },
@@ -254,7 +260,6 @@ function Heropage() {
 
       {/* ── Contact Form (xl only) ── */}
       <div className="relative w-full hidden xl:flex items-center justify-center z-10 pr-16">
-        {/* Floating card wrapper */}
         <div
           className="w-full max-w-[480px] rounded-2xl p-8 border border-white/10"
           style={{
@@ -272,6 +277,86 @@ function Heropage() {
           <FormComponent />
         </div>
       </div>
+
+      {/* ── RESUME MODAL ── */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto animate-fadeIn"
+          style={{
+            // background: 'rgba(0,0,0,0.8)',
+            backdropFilter: 'blur(6px)',
+            padding: '24px 12px',
+          }}
+          onClick={closeModal}
+        >
+          {/* Floating close button (stays fixed on screen while scrolling) */}
+          <button
+            onClick={closeModal}
+            className="fixed top-5 right-5 z-[110] w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
+            style={{
+              background: 'rgba(20,20,25,0.85)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              backdropFilter: 'blur(10px)',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = 'rgba(22,146,161,0.9)';
+              e.currentTarget.style.borderColor = '#1692a1';
+              e.currentTarget.style.transform = 'rotate(90deg)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = 'rgba(20,20,25,0.85)';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+              e.currentTarget.style.transform = 'rotate(0deg)';
+            }}
+            aria-label="Close resume"
+          >
+            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Modal content wrapper — clicking inside should NOT close */}
+          <div
+            className="relative w-full max-w-[1040px] animate-slideUp"
+            onClick={(e) => e.stopPropagation()}
+            style={{ marginTop: 12, marginBottom: 12 }}
+          >
+            {/*
+              The Resume component already renders its own <main> with padding
+              and a centered <article>. We just drop it in — it handles its
+              own layout, sidebar, content, and the Download CV button.
+            */}
+            <div
+              style={{
+                borderRadius: 12,
+                overflow: 'hidden',
+                boxShadow: '0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(22,146,161,0.2)',
+              }}
+            >
+              <Resume />
+            </div>
+          </div>
+
+          {/* Inline animations */}
+          <style jsx>{`
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+            @keyframes slideUp {
+              from { opacity: 0; transform: translateY(24px) scale(0.98); }
+              to { opacity: 1; transform: translateY(0) scale(1); }
+            }
+            .animate-fadeIn {
+              animation: fadeIn 0.25s ease-out;
+            }
+            .animate-slideUp {
+              animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+          `}</style>
+        </div>
+      )}
 
     </div>
   );

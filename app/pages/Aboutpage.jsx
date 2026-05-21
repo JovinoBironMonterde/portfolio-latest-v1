@@ -1,9 +1,11 @@
 // C:\xampp\htdocs\portfolio\app\pages\Aboutpage.jsx
-import React from 'react'
+"use client";
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 // import AboutImage from '../../public/assets/img/6.png';
 import AboutImage from '../../public/assets/img/imagev2.png';
 import RevealAnimation from '../components/RevealAnimation';
+import Resume from '../components/Resume'; // ⬅️ adjust path if needed
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailIcon from '@mui/icons-material/Mail';
@@ -29,9 +31,29 @@ const highlights = [
 ];
 
 function Aboutpage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const ShowModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  // Close modal on Escape + lock background scroll while open
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') closeModal();
+    };
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEsc);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+
   return (
     <div className='relative w-full max-w-[1300px] mx-auto rounded-3xl overflow-hidden lg:flex md:flex items-stretch reveal fade-bottom'>
-      
+
       {/* ── Left: Image Panel ── */}
       <div
         className="relative image-profile-image w-full lg:w-[45%] flex justify-center items-end overflow-hidden"
@@ -177,25 +199,100 @@ function Aboutpage() {
             {/* Divider */}
             <div className="w-[1px] h-8 hidden lg:block" style={{ background: 'rgba(0,0,0,0.1)' }} />
 
-            {/* Download CV button */}
-            <a
-              href="https://drive.google.com/file/d/1Lk-tpj-E8KljqWgRScaEPxDykjNPx8zO/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.03]"
+            {/* Resume button — now opens modal */}
+            <button
+              type="button"
+              onClick={ShowModal}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:scale-[1.03] cursor-pointer"
               style={{
                 background: '#1692a1',
                 color: 'white',
+                border: 'none',
                 boxShadow: '0 4px 20px rgba(22,146,161,0.35)',
               }}
             >
               <DownloadIcon fontSize="small" />
               Resume
-            </a>
+            </button>
           </div>
 
         </div>
       </div>
+
+      {/* ── RESUME MODAL ── */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto animate-fadeIn"
+          style={{
+            background: 'rgba(0,0,0,0.8)',
+            backdropFilter: 'blur(6px)',
+            padding: '24px 12px',
+          }}
+          onClick={closeModal}
+        >
+          {/* Floating close button (stays fixed on screen while scrolling) */}
+          <button
+            onClick={closeModal}
+            className="fixed top-5 right-5 z-[110] w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer"
+            style={{
+              background: 'rgba(20,20,25,0.85)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              backdropFilter: 'blur(10px)',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = 'rgba(22,146,161,0.9)';
+              e.currentTarget.style.borderColor = '#1692a1';
+              e.currentTarget.style.transform = 'rotate(90deg)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = 'rgba(20,20,25,0.85)';
+              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
+              e.currentTarget.style.transform = 'rotate(0deg)';
+            }}
+            aria-label="Close resume"
+          >
+            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Modal content wrapper — clicking inside should NOT close */}
+          <div
+            className="relative w-full max-w-[1040px] animate-slideUp"
+            onClick={(e) => e.stopPropagation()}
+            style={{ marginTop: 12, marginBottom: 12 }}
+          >
+            <div
+              style={{
+                borderRadius: 12,
+                overflow: 'hidden',
+                boxShadow: '0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(22,146,161,0.2)',
+              }}
+            >
+              <Resume />
+            </div>
+          </div>
+
+          {/* Inline animations */}
+          <style jsx>{`
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+            @keyframes slideUp {
+              from { opacity: 0; transform: translateY(24px) scale(0.98); }
+              to { opacity: 1; transform: translateY(0) scale(1); }
+            }
+            .animate-fadeIn {
+              animation: fadeIn 0.25s ease-out;
+            }
+            .animate-slideUp {
+              animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+          `}</style>
+        </div>
+      )}
 
     </div>
   )
