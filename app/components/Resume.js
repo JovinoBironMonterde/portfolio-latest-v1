@@ -348,12 +348,12 @@ export default function Home() {
       `}</style>
 
       <main style={{
-        minHeight: "100vh",
+        minHeight: "80vh",
         background: "#dde3ea",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "132px 16px",
+        padding: "34px 16px",
       }}>
         <article ref={resumeRef} style={{
           width: "100%",

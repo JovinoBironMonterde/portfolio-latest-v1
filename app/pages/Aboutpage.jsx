@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 // import AboutImage from '../../public/assets/img/6.png';
-import AboutImage from '../../public/assets/img/imagev2.png';
+import AboutImage from '../../public/assets/img/Jovino2.png';
 import RevealAnimation from '../components/RevealAnimation';
 import Resume from '../components/Resume'; // ⬅️ adjust path if needed
 
@@ -77,10 +77,11 @@ function Aboutpage() {
         {/* Profile image */}
         <div className="relative z-10 px-8 pt-10 pb-0">
           <Image
-            className='z-10 h-auto drop-shadow-2xl -mb-32'
+            className='z-10 h-auto drop-shadow-2xl mb-0'
             src={AboutImage}
             alt="Jovino Monterde"
-            width={210}
+            width={410}
+            height={410}
             style={{ objectFit: 'contain' }}
           />
         </div>
@@ -226,7 +227,7 @@ function Aboutpage() {
           style={{
             background: 'rgba(0,0,0,0.8)',
             backdropFilter: 'blur(6px)',
-            padding: '24px 12px',
+            padding: '12px',
           }}
           onClick={closeModal}
         >
@@ -261,7 +262,7 @@ function Aboutpage() {
           <div
             className="relative w-full max-w-[1040px] animate-slideUp"
             onClick={(e) => e.stopPropagation()}
-            style={{ marginTop: 12, marginBottom: 12 }}
+            style={{ marginTop: 80, marginBottom: 12 }}
           >
             <div
               style={{

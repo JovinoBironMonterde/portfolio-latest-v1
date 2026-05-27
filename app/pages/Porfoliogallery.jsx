@@ -63,24 +63,52 @@ export default function Porfoliogallery() {
             {currentProject.title}
           </h1>
 
-          {currentProject.linkViewPage ? (
-            <a
-              href={currentProject.linkViewPage}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200"
-              style={{
-                background: 'rgba(22,146,161,0.12)',
-                color: '#1692a1',
-                border: '1px solid rgba(22,146,161,0.25)',
-              }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#1692a1'; e.currentTarget.style.color = 'white'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(22,146,161,0.12)'; e.currentTarget.style.color = '#1692a1'; }}
-            >
-              <ExternalLink size={14} />
-              View Live
-            </a>
-          ) : <div className="w-24" />}
+          {/* Action buttons - each link renders independently */}
+          <div className="flex items-center gap-2">
+            {currentProject.linkViewPage && (
+              <a
+                href={currentProject.linkViewPage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200"
+                style={{
+                  background: 'rgba(22,146,161,0.12)',
+                  color: '#1692a1',
+                  border: '1px solid rgba(22,146,161,0.25)',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#1692a1'; e.currentTarget.style.color = 'white'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(22,146,161,0.12)'; e.currentTarget.style.color = '#1692a1'; }}
+              >
+                <ExternalLink size={14} />
+                View Live
+              </a>
+            )}
+
+            {currentProject.linkViewCode && (
+              <a
+                href={currentProject.linkViewCode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg transition-all duration-200"
+                style={{
+                  background: 'rgba(22,146,161,0.12)',
+                  color: '#1692a1',
+                  border: '1px solid rgba(22,146,161,0.25)',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#1692a1'; e.currentTarget.style.color = 'white'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(22,146,161,0.12)'; e.currentTarget.style.color = '#1692a1'; }}
+              >
+                <ExternalLink size={14} />
+                View Code
+              </a>
+            )}
+
+            {!currentProject.linkViewPage && !currentProject.linkViewCode && (
+              <span className="text-xs italic" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                Private project
+              </span>
+            )}
+          </div>
         </div>
 
         {/* Main content */}
@@ -220,7 +248,7 @@ export default function Porfoliogallery() {
                   </div>
                 )}
 
-                {/* CTA */}
+                {/* CTA buttons - sidebar */}
                 {currentProject.linkViewPage && (
                   <a
                     href={currentProject.linkViewPage}
@@ -237,6 +265,25 @@ export default function Porfoliogallery() {
                   >
                     <ExternalLink size={15} />
                     Visit Live Project
+                  </a>
+                )}
+
+                {currentProject.linkViewCode && (
+                  <a
+                    href={currentProject.linkViewCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold transition-all duration-200"
+                    style={{
+                      background: 'transparent',
+                      color: '#1692a1',
+                      border: '1px solid rgba(22,146,161,0.4)',
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(22,146,161,0.12)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
+                  >
+                    <ExternalLink size={15} />
+                    View Source Code
                   </a>
                 )}
               </div>

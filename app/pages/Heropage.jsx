@@ -285,7 +285,7 @@ function Heropage() {
           style={{
             // background: 'rgba(0,0,0,0.8)',
             backdropFilter: 'blur(6px)',
-            padding: '24px 12px',
+            padding: '12px',
           }}
           onClick={closeModal}
         >
@@ -320,7 +320,7 @@ function Heropage() {
           <div
             className="relative w-full max-w-[1040px] animate-slideUp"
             onClick={(e) => e.stopPropagation()}
-            style={{ marginTop: 12, marginBottom: 12 }}
+            style={{ marginTop: 80, marginBottom: 12 }}
           >
             {/*
               The Resume component already renders its own <main> with padding

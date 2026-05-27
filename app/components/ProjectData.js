@@ -14,6 +14,7 @@ const Nextjs   = "/assets/logo/Nextjs.png";
 const Nodejs   = "/assets/logo/Nodejs.png";
 const npm   = "/assets/logo/npm.png";
 const React   = "/assets/logo/React.png";
+const ReactNative   = "/assets/logo/react-native.png";
 const Slack   = "/assets/logo/Slack.png";
 const TailwindCSS   = "/assets/logo/TailwindCSS.png";
 const Python  = "/assets/logo/Python.png";
@@ -85,6 +86,17 @@ const lendflow3 = "/assets/img/lendflow/lendflow3.png";
 const lendflow4 = "/assets/img/lendflow/lendflow4.png";
 const lendflow5 = "/assets/img/lendflow/lendflow5.png";
 const lendflowFrame = "/assets/img/lendflow/lendflowFrame.png";
+
+const DatingApp = "/assets/img/mobile_apps/dating_app/Dating_App.png";
+const DatingApp1 = "/assets/img/mobile_apps/dating_app/Dating_App1.png";
+const DatingApp2 = "/assets/img/mobile_apps/dating_app/Dating_App2.png";
+const DatingApp3 = "/assets/img/mobile_apps/dating_app/Dating_App3.png";
+const DatingApp4 = "/assets/img/mobile_apps/dating_app/Dating_App4.png";
+const DatingApp5 = "/assets/img/mobile_apps/dating_app/Dating_App5.png";
+const DatingApp6 = "/assets/img/mobile_apps/dating_app/Dating_App6.png";
+const RealisticDatingApp1 = "/assets/img/mobile_apps/dating_app/Realistic-Dating-App1.png";
+const RealisticDatingApp2 = "/assets/img/mobile_apps/dating_app/Realistic-Dating-App2.png";
+const RealisticDatingApp3 = "/assets/img/mobile_apps/dating_app/Realistic-Dating-App3.png";
 
 
 
@@ -256,6 +268,36 @@ export const projectsData = [
       { ImgLogo: Nextjs, title: "Next.js", percentage: "52.3%" },
       { ImgLogo: TailwindCSS, title: "Tailwind CSS", percentage: "95.3%" }, 
     ],
-  }
+  },
+{ 
+  id: 10, 
+  title: 'Spark Dating App UI Demo',
+  description: `Spark is a modern dating app UI demo built with React Native and NativeWind, designed to showcase a sleek dark-themed mobile experience with smooth layouts, premium-style components, and intuitive user interactions. The project focuses on frontend UI/UX implementation including chat interfaces, profile management screens, premium subscription flows, and responsive mobile-first design using reusable component architecture. This project is intended for frontend and UI demonstration purposes only, while backend services and real-time functionality are currently in development.`,
+  details: `
+      Spark was developed as a frontend UI demo project inspired by modern social and dating applications. The goal of the project was to create a polished, visually engaging, and responsive mobile experience that demonstrates clean UI architecture, modern interaction patterns, and scalable component design using React Native and NativeWind.
+      Built with React Native and styled using NativeWind, the application showcases reusable mobile components, responsive layouts, smooth navigation flows, and a modern dark-themed interface optimized for mobile devices. The design focuses on usability, accessibility, visual hierarchy, and premium mobile app aesthetics commonly found in modern dating platforms.
+      The demo includes several core interface modules such as real-time styled chat screens, user profile management, match interactions, premium subscription plans, onboarding-inspired layouts, and modern settings pages. Carefully designed UI elements including gradient buttons, status indicators, profile cards, and subscription components were implemented to create a realistic and engaging mobile application experience.
+      All content displayed throughout the application uses static sample data for demonstration purposes only. The project currently does not include backend integration, authentication systems, database connectivity, real-time messaging, or API services, as the primary focus is frontend development, mobile UI design, and component architecture.
+      This project highlights my ability to build modern and scalable mobile interfaces using industry-standard technologies while applying clean code practices, responsive design principles, and professional UI/UX development workflows.
+      `,
+
+  Status: 'In Progress',
+  src: DatingApp, 
+  alt: 'Spark Dating App UI demo mobile application preview',
+  children: [
+    DatingApp,
+    RealisticDatingApp1,
+    RealisticDatingApp2,
+    RealisticDatingApp3
+  ],
+
+  linkViewPage: "",
+  linkViewCode: "https://github.com/JovinoBironMonterde/Dating-app.git",
+
+  tech: [
+    { ImgLogo: React, title: "React Native", percentage: "88.5%" },
+    { ImgLogo: TailwindCSS, title: "NativeWind", percentage: "95.3%" },
+  ],
+}
 
 ];

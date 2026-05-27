@@ -353,7 +353,7 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "132px 16px",
+        padding: "50px 16px",
       }}>
         <article ref={resumeRef} style={{
           width: "100%",
