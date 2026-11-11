@@ -56,7 +56,7 @@ function Profession() {
                 >
                   {/* Language label — left side, outside the bar fill */}
                   <div
-                    className="absolute left-4 p-3 bottom-2 z-50 text-sm font-semibold"
+                    className="absolute right-4 p-3 bottom-2 z-50 text-sm font-semibold"
                     style={{ color: 'rgba(255,255,255,0.35)' }}
                   >
                     {skills.language}
